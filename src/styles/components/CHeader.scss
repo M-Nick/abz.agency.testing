@@ -1,0 +1,76 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.header {
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: var(--max-width);
+  height: var(--header-h);
+  margin: auto;
+  background-color: var(--bg-color);
+  padding: 0 47px;
+  &__logo {
+    width: f.cols(2, 2);
+    height: 24px;
+    img {
+      height: 100%;
+      width: 134px;
+    }
+  }
+  &__links {
+    position: relative;
+    top: -2px;
+    width: f.cols(7, 6);
+    padding: 0 35px 0 42px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+  }
+  &__item {
+  }
+  &__link {
+    @include m.font-p2;
+  }
+  &__user {
+    width: f.cols(3, 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: f.cols(0, 1);
+  }
+  &__info {
+    align-self: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include m.font-p3;
+    width: 119px;
+  }
+  &__usermane {
+    display: inline;
+  }
+  &__email {
+    display: inline;
+    color: #8d8c8c;
+    @include m.font-source-sans-pro(12, 16);
+  }
+  &__img {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+  }
+  &__sign-out {
+    width: 24px;
+    height: 20px;
+  }
+}

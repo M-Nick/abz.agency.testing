@@ -1,0 +1,18 @@
+$_big_size: 50;
+$_small_size: 30;
+
+@function cols($big, $small) {
+  $result: 0;
+  @if $big > 0 {
+    @for $_ from 1 through $big {
+      $result: $result + $_big_size;
+    }
+  }
+  @if $small > 0 {
+    @for $_ from 1 through $small {
+      $result: $result + $_small_size;
+    }
+  }
+  $result: $result * 1px;
+  @return $result;
+}

@@ -1,0 +1,40 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.about {
+  padding: 134px 47px 100px 47px;
+  &__header {
+    @include m.font-h2(desktop);
+    text-align: center;
+    margin-bottom: 23px;
+  }
+  &__body {
+    display: flex;
+  }
+  &__img {
+    position: relative;
+    margin-right: 30px;
+    left: 1px;
+  }
+  &__info {
+    padding-top: 20px;
+  }
+  &__title {
+    @include m.font-h3(desktop);
+    margin-bottom: 6px;
+  }
+  &__text {
+    @include m.font-p2;
+    width: 612px;
+    margin-left: 2px;
+    margin-bottom: 22px;
+  }
+  &__link {
+    @include m.font-source-sans-pro(22, 22);
+    color: var(--prim-color);
+    font-weight: 700;
+    &:hover {
+      color: var(--prim-hover);
+    }
+  }
+}

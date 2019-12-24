@@ -1,0 +1,12 @@
+:root {
+  --header-h: 64px;
+  --max-width: 1024px;
+
+  --prim-color: #ef6c00;
+  --prim-hover: #fc831f;
+  --sec-color: #283593;
+  --sec-hover: #2638bb;
+  --sec-disable: #939ac9;
+  --bg-color: #ffffff;
+  --bg-hover: #fee6d2;
+}

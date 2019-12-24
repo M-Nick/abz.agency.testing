@@ -1,0 +1,41 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.assignment {
+  padding: 133px 0 133px 46px;
+  position: relative;
+  width: var(--max-width);
+  height: 725px;
+  &__bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--sec-color);
+    background-image: url(../../assets/bg-1.jpg);
+    background-position: 0 0;
+    background-size: 1327px 885px;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    @include m.font-h1(desktop);
+    position: relative;
+    width: f.cols(6, 5);
+    color: white;
+  }
+  &__text {
+    @include m.font-source-sans-pro(20.1, 26);
+    color: white;
+    position: relative;
+    left: 2px;
+    width: f.cols(6, 5);
+    margin-top: 18px;
+    margin-bottom: 40px;
+  }
+  &__sign-up {
+    position: relative;
+    left: 1px;
+  }
+}

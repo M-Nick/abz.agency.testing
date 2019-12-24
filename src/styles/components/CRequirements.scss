@@ -1,0 +1,50 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.reqs {
+  position: relative;
+  height: 755px;
+  padding: 134px 47px;
+  width: var(--max-width);
+  margin-bottom: 135px;
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../../assets/bg-2.jpg);
+    background-position: -3px 0;
+    background-size: 1145px 764px;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  &__header {
+    position: relative;
+    @include m.font-h2(desktop);
+    text-align: center;
+    margin-bottom: 39px;
+    color: white;
+  }
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  &__info {
+    width: f.cols(6, 5);
+    width: 447px;
+  }
+  &__p {
+    @include m.font-p2;
+    margin-bottom: 22px;
+  }
+  &__img {
+    position: relative;
+    width: 429px;
+    height: auto;
+    top: -13px;
+    left: 1px;
+  }
+}

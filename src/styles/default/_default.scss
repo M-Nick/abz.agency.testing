@@ -1,0 +1,60 @@
+@use "mixins" as m;
+@use "functions" as f;
+
+.link {
+  text-decoration: none;
+  color: black;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    color: var(--prim-hover);
+  }
+  &-on-dark {
+    text-decoration: none;
+    color: white;
+    &:visited {
+      color: white;
+    }
+    &:hover {
+      color: var(--prim-color);
+    }
+  }
+}
+.secondary-icon {
+  text-decoration: none;
+  color: var(--sec-color);
+  &:hover {
+    color: var(--sec-hover);
+  }
+  &-disabled {
+    color: var(--sec-disable);
+  }
+}
+
+.button {
+  @include m.font-source-sans-pro(20, 18);
+  font-weight: 700;
+  width: f.cols(4, 3);
+  display: block;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  padding-left: 2px;
+  &--primary {
+    padding-top: 10px;
+    cursor: pointer;
+    background-color: var(--prim-color);
+    color: white;
+  }
+  &--secondary {
+    padding-top: 8px;
+    border: 2px solid var(--prim-color);
+    color: var(--prim-color);
+    background-color: var(--bg-color);
+    &:hover {
+      cursor: pointer;
+      background-color: var(--bg-hover);
+    }
+  }
+}

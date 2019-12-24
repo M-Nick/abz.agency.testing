@@ -1,0 +1,70 @@
+@use '../default/functions' as f;
+@use '../default/mixins' as m;
+
+.users {
+  padding: 0 47px;
+  &__header {
+    text-align: center;
+    @include m.font-h2(desktop);
+    margin-bottom: 13px;
+  }
+  &__title {
+    text-align: center;
+    @include m.font-overpass(16.9, 20);
+    margin-bottom: 59px;
+  }
+  &__group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__user {
+    width: f.cols(4, 3);
+    display: flex;
+    justify-content: space-between;
+    margin-right: f.cols(0, 1);
+    margin-bottom: 60px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  &__avatar {
+    --size: 70px;
+    width: var(--size);
+    height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  &__info {
+    width: f.cols(3, 2);
+    margin-top: 25px;
+  }
+  &__name {
+    @include m.font-h4(desktop);
+    margin-bottom: 8px;
+    margin-left: -1px;
+    margin-top: 1px;
+  }
+  &__position {
+    @include m.font-source-sans-pro(14, 17);
+    margin-bottom: 2px;
+  }
+  &__email {
+    @include m.font-source-sans-pro(14, 17);
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+  }
+  &__phone {
+    @include m.font-source-sans-pro(14, 17);
+  }
+  &__button {
+    position: relative;
+    margin-top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
