@@ -58,7 +58,7 @@
   }
   &__email {
     display: inline;
-    color: #8d8c8c;
+    color: var(--grey-color);
     @include m.font-source-sans-pro(12, 16);
   }
   &__img {

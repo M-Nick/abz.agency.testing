@@ -36,7 +36,7 @@
   &__text {
     @include m.font-p2;
     margin-left: 3px;
-    color: #4c4b4b;
+    color: var(--grey-text);
     &--short {
       width: f.cols(3, 3);
     }

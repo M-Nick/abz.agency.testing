@@ -30,7 +30,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    color: white;
+    color: var(--prewhite-color);
   }
   &__info {
     width: f.cols(6, 5);

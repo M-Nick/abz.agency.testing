@@ -6,7 +6,8 @@
   display: block;
   margin-bottom: 20px;
   margin-top: 11px;
-  --color: #b7b7b7;
+  --color: var(--grey-color);
+  --border-color: #b7b7b7;
   &--error {
     --color: var(--error-color);
     .input__name {
@@ -19,7 +20,7 @@
   }
   &__input {
     @include m.font-p2;
-    color: black;
+    color: var(--preblack-color);
     position: relative;
     display: block;
     height: 56px;
@@ -64,7 +65,8 @@
     font-size: 14px;
     background-color: #ffffff;
     top: 0;
-    padding: 0 4px;
+    padding-left: 4px;
+    padding-right: 7px;
     left: 14px;
   }
 }

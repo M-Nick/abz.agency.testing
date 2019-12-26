@@ -11,6 +11,7 @@
   }
   &__title {
     @include m.font-p1;
+    color: var(--preblack-color);
     text-align: center;
     margin-bottom: 49px;
   }

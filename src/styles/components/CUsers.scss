@@ -49,10 +49,12 @@
     margin-top: 1px;
   }
   &__position {
+    color: var(--grey--text);
     @include m.font-source-sans-pro(14, 17);
     margin-bottom: 2px;
   }
   &__email {
+    color: var(--grey--text);
     @include m.font-source-sans-pro(14, 17);
     white-space: nowrap;
     width: 100%;
@@ -61,6 +63,7 @@
     margin-bottom: 2px;
   }
   &__phone {
+    color: var(--grey--text);
     @include m.font-source-sans-pro(14, 17);
   }
   &__button {
