@@ -1,0 +1,138 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+ul {
+  list-style: none;
+}
+
+.footer {
+  --padding-left: 47px;
+  --padding-right: 47px;
+  --hr-height: 1px;
+  position: relative;
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+  padding-bottom: 25px;
+  background-color: #283593;
+  &__top {
+    position: relative;
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--hr-height);
+    padding-bottom: 1px;
+  }
+  &__logo {
+    height: 24px;
+    width: 136px;
+    object-fit: cover;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    top: -1px;
+    position: relative;
+    margin-left: 29.4px;
+    @include m.font-p2;
+    color: white;
+  }
+  &__line {
+    border-bottom: var(--hr-height) solid #5674b9;
+    border-top: none;
+    position: absolute;
+    left: calc(-1 * var(--padding-left));
+    bottom: -1px;
+    width: calc(100% + var(--padding-left) + var(--padding-right));
+  }
+  &__middle {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact {
+    position: relative;
+    @include m.font-source-sans-pro(20, 24);
+    color: white;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    svg {
+      position: relative;
+      display: block;
+    }
+    &--email {
+      svg {
+        width: 24px;
+        height: 19px;
+        margin-top: 5px;
+        margin-left: 1px;
+        margin-right: 9px;
+      }
+    }
+    &--phone {
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 2.4px;
+        margin-right: 12px;
+        top: -1px;
+      }
+    }
+    &--mobile {
+      svg {
+        width: 18px;
+        height: 27px;
+        margin-top: 1px;
+        margin-left: 3px;
+        margin-right: 13px;
+      }
+    }
+  }
+  &__contents {
+    padding-top: 10px;
+    display: flex;
+  }
+  &__content {
+    position: relative;
+    top: -1px;
+    width: f.cols(2, 2);
+    text-align: right;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    @include m.font-p2;
+    margin-bottom: 8px;
+  }
+  &__bottom {
+    height: 26px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  &__copyright {
+    margin-top: 10px;
+    position: relative;
+    @include m.font-source-sans-pro(12.1, 16);
+    color: white;
+  }
+  &__socials {
+    position: relative;
+    display: flex;
+  }
+  &__social {
+    margin-left: 22px;
+    svg {
+      height: 26px;
+      width: 26px;
+    }
+  }
+}

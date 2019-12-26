@@ -13,7 +13,9 @@
         </div>
       </div>
     </div>
-    <a href="" class="button button--secondary users__button">Show more</a>
+    <button href="" class="button button--secondary users__button">
+      Show more
+    </button>
   </div>
 </template>
 

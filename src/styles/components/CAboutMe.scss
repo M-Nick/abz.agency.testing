@@ -29,12 +29,4 @@
     margin-left: 2px;
     margin-bottom: 22px;
   }
-  &__link {
-    @include m.font-source-sans-pro(22, 22);
-    color: var(--prim-color);
-    font-weight: 700;
-    &:hover {
-      color: var(--prim-hover);
-    }
-  }
 }

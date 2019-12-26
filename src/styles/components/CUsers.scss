@@ -3,15 +3,17 @@
 
 .users {
   padding: 0 47px;
+  margin-bottom: 154px;
   &__header {
     text-align: center;
     @include m.font-h2(desktop);
-    margin-bottom: 13px;
+    margin-bottom: 12.5px;
   }
   &__title {
     text-align: center;
-    @include m.font-overpass(16.9, 20);
+    @include m.font-pt-sans(18, 20);
     margin-bottom: 59px;
+    font-variation-settings: 'wght' 700;
   }
   &__group {
     display: flex;

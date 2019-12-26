@@ -12,6 +12,13 @@
   line-height: $line-height * 1px;
 }
 
+@mixin pt-sans($size, $line-height) {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+  font-size: $size * 1px;
+  line-height: $line-height * 1px;
+}
+
 @mixin h1($device) {
   @if $device == desktop {
     @include overpass(50, 60);

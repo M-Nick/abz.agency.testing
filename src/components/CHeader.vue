@@ -1,24 +1,24 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="header__logo">
       <img src="@/assets/logo.svg" alt="abz.agency" />
     </div>
     <nav class="header__links">
       <ul class="header__list">
         <li class="header__item">
-          <a href="" class="link header__link">About me</a>
+          <a href="" class="menu header__link">About me</a>
         </li>
         <li class="header__item">
-          <a href="" class="link header__link">Relationships</a>
+          <a href="" class="menu header__link">Relationships</a>
         </li>
         <li class="header__item">
-          <a href="" class="link header__link">Requirements</a>
+          <a href="" class="menu header__link">Requirements</a>
         </li>
         <li class="header__item">
-          <a href="" class="link header__link">Users</a>
+          <a href="" class="menu header__link">Users</a>
         </li>
         <li class="header__item">
-          <a href="" class="link header__link">Sign Up</a>
+          <a href="" class="menu header__link">Sign Up</a>
         </li>
       </ul>
     </nav>
@@ -32,7 +32,7 @@
         alt="superstar"
         class="header__img"
       />
-      <a class="secondary-icon header__sign-out" href="#">
+      <a class="icon header__sign-out" href="#">
         <svg
           width="24px"
           height="20px"
@@ -67,7 +67,7 @@
         </svg>
       </a>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>

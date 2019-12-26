@@ -16,7 +16,7 @@
           Last week, Google Search and Ads teams announced two new speed
           initiatives to help improve user-experience on the web.
         </p>
-        <a href="" class="about__link">Sign Up</a>
+        <a href="" class="link-bold about__link">Sign Up</a>
       </div>
     </div>
   </div>

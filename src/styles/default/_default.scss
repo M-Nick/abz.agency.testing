@@ -4,6 +4,7 @@
 .link {
   text-decoration: none;
   color: black;
+  cursor: pointer;
   &:visited {
     color: black;
   }
@@ -13,42 +14,89 @@
   &-on-dark {
     text-decoration: none;
     color: white;
+    cursor: pointer;
     &:visited {
       color: white;
     }
+    &:active {
+      color: var(--sec-hover);
+    }
     &:hover {
-      color: var(--prim-color);
+      color: var(--prim-hover);
+    }
+  }
+  &-bold {
+    @include m.font-source-sans-pro(22, 22);
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--prim-color);
+    cursor: pointer;
+    &:hover {
+      color: var(--prim-hover);
     }
   }
 }
-.secondary-icon {
+
+.menu {
   text-decoration: none;
+  cursor: pointer;
+  color: black;
+  &:hover {
+    color: var(--prim-color);
+  }
+  &:active {
+    color: var(--sec-color);
+  }
+}
+
+.icon {
+  cursor: pointer;
   color: var(--sec-color);
+  fill: currentColor;
   &:hover {
     color: var(--sec-hover);
   }
-  &-disabled {
-    color: var(--sec-disable);
+  &--disabled {
+    fill: currentColor;
+    opacity: 0.5;
+  }
+  &-on-dark {
+    cursor: pointer;
+    color: white;
+    fill: currentColor;
+    &:hover {
+      color: var(--prim-color);
+    }
+    &--disabled {
+      fill: currentColor;
+      opacity: 0.5;
+    }
   }
 }
 
 .button {
   @include m.font-source-sans-pro(20, 18);
   font-weight: 700;
-  width: f.cols(4, 3);
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 40px;
+  width: f.cols(4, 3);
   border-radius: 5px;
-  text-align: center;
-  padding-left: 2px;
+  cursor: pointer;
   &--primary {
-    padding-top: 10px;
-    cursor: pointer;
     background-color: var(--prim-color);
     color: white;
+    &:hover {
+      background-color: var(--prim-hover);
+    }
+    &:disabled {
+      cursor: default;
+      background-color: #d7d7d7;
+      color: #8d8c8c;
+    }
   }
   &--secondary {
-    padding-top: 8px;
     border: 2px solid var(--prim-color);
     color: var(--prim-color);
     background-color: var(--bg-color);
@@ -57,4 +105,14 @@
       background-color: var(--bg-hover);
     }
   }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }

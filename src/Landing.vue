@@ -6,6 +6,8 @@
     <CRelationships />
     <CRequirements />
     <CUsers />
+    <CRegister />
+    <CFooter />
   </div>
 </template>
 
@@ -16,6 +18,8 @@ import CAboutMe from '@/components/CAboutMe'
 import CRelationships from '@/components/CRelationships'
 import CRequirements from '@/components/CRequirements'
 import CUsers from '@/components/CUsers'
+import CRegister from '@/components/CRegister'
+import CFooter from '@/components/CFooter'
 
 export default {
   name: 'app',
@@ -26,6 +30,8 @@ export default {
     CRelationships,
     CRequirements,
     CUsers,
+    CRegister,
+    CFooter,
   },
 }
 </script>
@@ -45,6 +51,11 @@ export default {
 a {
   color: unset;
   text-decoration: none;
+}
+input {
+  color: unset;
+  background: none;
+  border: none;
 }
 #app {
   position: relative;
