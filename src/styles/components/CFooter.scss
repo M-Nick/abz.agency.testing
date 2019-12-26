@@ -8,11 +8,10 @@ ul {
 .footer {
   --padding-left: 47px;
   --padding-right: 47px;
-  --hr-height: 1px;
   position: relative;
   padding-left: var(--padding-left);
   padding-right: var(--padding-right);
-  padding-bottom: 25px;
+  padding-bottom: 31px;
   background-color: #283593;
   &__top {
     position: relative;
@@ -20,13 +19,12 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--hr-height);
     padding-bottom: 1px;
   }
   &__logo {
+    fill: white;
     height: 24px;
-    width: 136px;
-    object-fit: cover;
+    width: 135px;
   }
   &__menu {
     display: flex;
@@ -39,11 +37,11 @@ ul {
     color: white;
   }
   &__line {
-    border-bottom: var(--hr-height) solid #5674b9;
-    border-top: none;
-    position: absolute;
+    height: 1px;
+    background-color: #5674b9;
+    border: none;
+    position: relative;
     left: calc(-1 * var(--padding-left));
-    bottom: -1px;
     width: calc(100% + var(--padding-left) + var(--padding-right));
   }
   &__middle {
