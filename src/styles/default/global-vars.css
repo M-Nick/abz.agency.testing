@@ -2,6 +2,8 @@
   --header-h: 64px;
   --max-width: 1024px;
 
+  --default-text-color: #000000;
+
   --prim-color: #ef6c00;
   --prim-hover: #fc831f;
   --sec-color: #283593;
@@ -9,9 +11,21 @@
   --bg-color: #ffffff;
   --bg-hover: #fee6d2;
   --error-color: #f44336;
+  --color-on-dark: #ffffff;
+
   --grey-bg: #d7d7d7;
   --grey-color: #8d8c8c;
   --grey-text: #4c4b4b;
+
   --prewhite-color: #fefefe;
   --preblack-color: #010000;
+
+  --border-color: #b7b7b7;
+  --shadow-color: #010101;
+
+  --option-hover: #fce2cc;
+  --option-color: #393939;
+
+  --footer-bg: #283593;
+  --footer-line: #5674b9;
 }

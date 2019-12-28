@@ -23,11 +23,11 @@
     @include m.font-h1(desktop);
     position: relative;
     width: f.cols(6, 5);
-    color: white;
+    color: var(--color-on-dark);
   }
   &__text {
     @include m.font-source-sans-pro(20.1, 26);
-    color: white;
+    color: var(--color-on-dark);
     position: relative;
     left: 2px;
     width: f.cols(6, 5);

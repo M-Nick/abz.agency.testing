@@ -8,17 +8,21 @@
     <form class="register__form" novalidate>
       <div class="register__fieldset">
         <CInput
-          type="name"
+          type="text"
+          placeholder="Your name"
+          label="Name"
           v-model="registrationData.name"
           class="register__input"
         />
         <CInput
           type="email"
+          label="Email"
           v-model="registrationData.email"
           class="register__input"
         />
         <CInput
           type="tel"
+          label="Phone"
           v-model="registrationData.phone"
           class="register__input"
         />
@@ -30,7 +34,11 @@
           v-model="registrationData.position"
           class="register__select"
         />
-        <CFile v-model="registrationData.photo" class="register__file" />
+        <CFile
+          assistive="File format jpg up to 5 MB, the minimum size of 70x70px"
+          v-model="registrationData.photo"
+          class="register__file"
+        />
       </div>
       <input
         type="submit"
@@ -64,7 +72,7 @@ export default {
         email: '',
         phone: '',
         position: '',
-        photo: '',
+        photo: null,
       },
     }
   },

@@ -1,0 +1,55 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.file {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  --color: var(--grey-color);
+  &--error {
+    --color: var(--error-color);
+    .file__name {
+      border-color: var(--error-color);
+    }
+  }
+  &__name {
+    $height: 56;
+    width: f.cols(6, 5) - f.cols(2, 1);
+    border: 1px solid var(--border-color);
+    @include m.font-source-sans-pro(16, ($height - 2));
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    padding-left: 17px;
+    user-select: none;
+    &--placeholder {
+      color: var(--color);
+    }
+  }
+  &__button {
+    width: f.cols(2, 1);
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  &:hover {
+    .file__button {
+      background-color: var(--bg-hover);
+      border-color: var(--prim-hover);
+      color: var(--prim-hover);
+    }
+  }
+  &__assistive {
+    @include m.font-source-sans-pro(12, 16);
+    white-space: nowrap;
+    color: var(--color);
+    position: absolute;
+    left: 17px;
+    user-select: none;
+    pointer-events: none;
+    top: 100%;
+    margin-top: 4px;
+    letter-spacing: 0.0044em;
+  }
+}

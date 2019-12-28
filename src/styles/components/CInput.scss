@@ -7,12 +7,11 @@
   margin-bottom: 20px;
   margin-top: 11px;
   --color: var(--grey-color);
-  --border-color: #b7b7b7;
   &--error {
     --color: var(--error-color);
     .input__name {
       font-size: 14px;
-      background-color: #ffffff;
+      background-color: var(--bg-color);
       top: 0;
       padding: 0 4px;
       left: 14px;
@@ -51,7 +50,7 @@
       top 0.2s ease, padding 0.2s ease 0.2s, left 0.2s ease 0.2s;
   }
   &__assistive {
-    @include m.font-p3;
+    @include m.font-source-sans-pro(12, 16);
     white-space: nowrap;
     color: var(--color);
     position: absolute;
@@ -63,7 +62,7 @@
   &__input:focus ~ &__name,
   &__input:not(:placeholder-shown) ~ &__name {
     font-size: 14px;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
     top: 0;
     padding-left: 4px;
     padding-right: 7px;

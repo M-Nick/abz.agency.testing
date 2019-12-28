@@ -1,14 +1,36 @@
 <template>
   <label class="input">
-    <input placeholder="Label text" class="input__input" type="text" />
-    <span class="input__name">Label text</span>
-    <span class="input__assistive">Assistive text</span>
+    <input placeholder="Label text" class="input__input" :type="type" />
+    <span class="input__name">{{ label }}</span>
+    <span class="input__assistive">{{ assistive }}</span>
   </label>
 </template>
 
 <script>
 export default {
   name: 'CInput',
+  props: {
+    type: {
+      type: String,
+      default: 'text',
+    },
+    value: {
+      type: String,
+      default: '',
+    },
+    error: {
+      type: Boolean,
+      default: false,
+    },
+    label: {
+      type: String,
+      default: '',
+    },
+    assistive: {
+      type: String,
+      default: '',
+    },
+  },
   data() {
     return {}
   },

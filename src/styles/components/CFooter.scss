@@ -8,7 +8,7 @@
   padding-left: var(--padding-left);
   padding-right: var(--padding-right);
   padding-bottom: 31px;
-  background-color: #283593;
+  background-color: var(--footer-bg);
   &__top {
     position: relative;
     height: 85px;
@@ -23,7 +23,7 @@
     top: 2px;
   }
   &__logo {
-    fill: white;
+    fill: var(--color-on-dark);
     height: 24px;
     width: 135px;
   }
@@ -35,11 +35,11 @@
     position: relative;
     margin-left: 29.4px;
     @include m.font-p2;
-    color: white;
+    color: var(--color-on-dark);
   }
   &__line {
     height: 1px;
-    background-color: #5674b9;
+    background-color: var(--footer-line);
     border: none;
     position: relative;
     left: calc(-1 * var(--padding-left));
@@ -58,7 +58,7 @@
   &__contact {
     position: relative;
     @include m.font-source-sans-pro(20, 24);
-    color: white;
+    color: var(--color-on-dark);
     height: 44px;
     display: flex;
     align-items: center;
@@ -121,7 +121,7 @@
     margin-top: 10px;
     position: relative;
     @include m.font-source-sans-pro(12.1, 16);
-    color: white;
+    color: var(--color-on-dark);
   }
   &__socials {
     position: relative;

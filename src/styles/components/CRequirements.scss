@@ -24,7 +24,7 @@
     @include m.font-h2(desktop);
     text-align: center;
     margin-bottom: 39px;
-    color: white;
+    color: var(--color-on-dark);
   }
   &__body {
     position: relative;

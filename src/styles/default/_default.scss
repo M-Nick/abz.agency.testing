@@ -3,20 +3,20 @@
 
 .link {
   text-decoration: none;
-  color: black;
+  color: var(--default-text-color);
   cursor: pointer;
   &:visited {
-    color: black;
+    color: var(--default-text-color);
   }
   &:hover {
     color: var(--prim-color);
   }
   &-on-dark {
     text-decoration: none;
-    color: white;
+    color: var(--color-on-dark);
     cursor: pointer;
     &:visited {
-      color: white;
+      color: var(--color-on-dark);
     }
     &:active {
       color: var(--sec-hover);
@@ -40,7 +40,7 @@
 .menu {
   text-decoration: none;
   cursor: pointer;
-  color: black;
+  color: var(--default-text-color);
   &:hover {
     color: var(--prim-color);
   }
@@ -62,7 +62,7 @@
   }
   &-on-dark {
     cursor: pointer;
-    color: white;
+    color: var(--color-on-dark);
     fill: currentColor;
     &:hover {
       color: var(--prim-color);
