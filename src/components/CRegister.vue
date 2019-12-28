@@ -1,5 +1,5 @@
 <template>
-  <div class="register">
+  <section class="register">
     <h1 class="register__header">Register to get a work</h1>
     <div class="register__title">
       Attention! After successful registration and alert, update the list of
@@ -7,13 +7,30 @@
     </div>
     <form class="register__form" novalidate>
       <div class="register__fieldset">
-        <CInput class="register__input" />
-        <CInput class="register__input" />
-        <CInput class="register__input" />
+        <CInput
+          type="name"
+          v-model="registrationData.name"
+          class="register__input"
+        />
+        <CInput
+          type="email"
+          v-model="registrationData.email"
+          class="register__input"
+        />
+        <CInput
+          type="tel"
+          v-model="registrationData.phone"
+          class="register__input"
+        />
       </div>
       <div class="register__fieldset">
-        <CSelect class="register__select" />
-        <CFile class="register__file" />
+        <CSelect
+          placeholder="Select your position"
+          :options="positions"
+          v-model="registrationData.position"
+          class="register__select"
+        />
+        <CFile v-model="registrationData.photo" class="register__file" />
       </div>
       <input
         type="submit"
@@ -22,13 +39,15 @@
         disabled
       />
     </form>
-  </div>
+  </section>
 </template>
 
 <script>
 import CInput from '@/components/CInput'
 import CSelect from '@/components/CSelect'
 import CFile from '@/components/CFile'
+
+import { url } from '@/configs/url.js'
 
 export default {
   name: 'CRegister',
@@ -38,7 +57,30 @@ export default {
     CFile,
   },
   data() {
-    return {}
+    return {
+      positions: [],
+      registrationData: {
+        name: '',
+        email: '',
+        phone: '',
+        position: '',
+        photo: '',
+      },
+    }
+  },
+  async mounted() {
+    await this.getPositionsRequest()
+  },
+  methods: {
+    async getPositionsRequest() {
+      const response = await fetch(url.get.positions)
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success) {
+          this.positions = data.positions
+        }
+      }
+    },
   },
 }
 </script>

@@ -17,6 +17,11 @@
     align-items: center;
     padding-bottom: 1px;
   }
+  &__logo-link {
+    position: relative;
+    display: block;
+    top: 2px;
+  }
   &__logo {
     fill: white;
     height: 24px;

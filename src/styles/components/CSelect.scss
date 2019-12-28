@@ -16,6 +16,7 @@
     background-color: var(--bg-color);
     @include m.font-source-sans-pro(16, ($height - 2));
     color: black;
+    user-select: none;
     appearance: none;
     cursor: pointer;
   }
@@ -23,18 +24,17 @@
     position: absolute;
     width: 16px;
     height: 10px;
-    right: 12px;
+    right: 20px;
     top: 24px;
     pointer-events: none;
   }
   &__list {
     position: absolute;
-    top: -1px;
+    top: 100%;
     z-index: 5;
     background-color: #ffffff;
-    width: calc(100% + 10px);
-    left: 50%;
-    transform: translateX(-50%);
+    width: calc(100% + 33px);
+    left: 0;
     border-radius: 2px;
     box-shadow: 0 3px 8px #010101;
   }
@@ -52,6 +52,15 @@
     }
     &--selected {
       color: var(--prim-color);
+    }
+    &--empty {
+      text-align: center;
+      $height: 20;
+      @include m.font-source-sans-pro(16, $height);
+      height: $height * 1px;
+      &:hover {
+        background-color: var(--grey-bg);
+      }
     }
   }
 }

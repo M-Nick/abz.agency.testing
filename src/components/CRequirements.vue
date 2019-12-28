@@ -1,5 +1,5 @@
 <template>
-  <div class="reqs">
+  <section class="reqs">
     <div class="reqs__bg"></div>
     <h1 class="reqs__header">General requirements for the test task</h1>
     <div class="reqs__body">
@@ -31,7 +31,7 @@
         class="reqs__img"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

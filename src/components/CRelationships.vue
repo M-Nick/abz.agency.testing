@@ -1,10 +1,10 @@
 <template>
-  <div class="relates">
+  <section class="relates">
     <div class="relates__header">
       About my relationships with web-development
     </div>
     <div class="relates__body">
-      <div class="relates__tech">
+      <article class="relates__tech">
         <img
           src="@/assets/html.svg"
           alt="html logo"
@@ -15,8 +15,8 @@
           Hypertext Markup Language (HTML) is the standard markup language for
           creating web pages and web applications.
         </div>
-      </div>
-      <div class="relates__tech">
+      </article>
+      <article class="relates__tech">
         <img
           src="@/assets/css.svg"
           alt="css logo"
@@ -28,8 +28,8 @@
           describing the presentation of a document written in a markup language
           like HTML.
         </div>
-      </div>
-      <div class="relates__tech">
+      </article>
+      <article class="relates__tech">
         <img
           src="@/assets/javascript.svg"
           alt="javascript logo"
@@ -41,9 +41,9 @@
           language which is also characterized as dynamic, weakly typed,
           prototype-based and <br />multi-paradigm.
         </div>
-      </div>
+      </article>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

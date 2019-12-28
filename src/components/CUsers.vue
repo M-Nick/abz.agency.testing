@@ -1,9 +1,9 @@
 <template>
-  <div class="users">
+  <section class="users">
     <h1 class="users__header">Our cheerful users</h1>
     <p class="users__title">Attention! Sorting users by registration date</p>
     <div class="users__group">
-      <div v-for="(user, index) in users" :key="index" class="users__user">
+      <article v-for="(user, index) in users" :key="index" class="users__user">
         <img :src="user.avatar" alt="user.name" class="users__avatar" />
         <div class="users__info">
           <div class="users__name">{{ user.name }}</div>
@@ -11,12 +11,12 @@
           <div class="users__email">{{ user.email }}</div>
           <div class="users__phone">{{ user.phone }}</div>
         </div>
-      </div>
+      </article>
     </div>
     <button href="" class="button button--secondary users__button">
       Show more
     </button>
-  </div>
+  </section>
 </template>
 
 <script>

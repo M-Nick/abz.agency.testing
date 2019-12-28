@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about">
     <h1 class="about__header">Let's get acquainted</h1>
     <div class="about__body">
       <img src="@/assets/man-mobile.svg" alt="" class="about__img" />
@@ -19,7 +19,7 @@
         <a href="" class="link-bold about__link">Sign Up</a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

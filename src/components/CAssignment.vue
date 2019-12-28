@@ -1,5 +1,5 @@
 <template>
-  <div class="assignment">
+  <section class="assignment">
     <div class="assignment__bg"></div>
     <h1 class="assignment__title">
       Test assignment for Frontend Developer position
@@ -11,7 +11,7 @@
       forward to your submission. Good luck!
     </p>
     <a href="" class="button button--primary assignment__sign-up">Sign Up</a>
-  </div>
+  </section>
 </template>
 
 <script>
