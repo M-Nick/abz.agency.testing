@@ -210,11 +210,9 @@
 export default {
   name: 'CFooter',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CFooter.scss">

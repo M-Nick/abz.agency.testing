@@ -24,7 +24,7 @@
     position: relative;
     top: -2px;
     width: f.cols(7, 6);
-    padding: 0 35px 0 42px;
+    padding: 0 35px 0 41.4px;
   }
   &__list {
     display: flex;
@@ -32,7 +32,9 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    list-style: none;
+  }
+  &__item {
+    padding-left: 0.1px;
   }
   &__link {
     @include m.font-p2;
@@ -43,6 +45,7 @@
     align-items: center;
     justify-content: space-between;
     margin-left: f.cols(0, 1);
+    padding-right: 1px;
   }
   &__info {
     align-self: flex-start;
@@ -52,6 +55,7 @@
     align-items: flex-end;
     @include m.font-p3;
     width: 119px;
+    padding-top: 1px;
   }
   &__usermane {
     display: inline;
@@ -59,7 +63,8 @@
   &__email {
     display: inline;
     color: var(--grey-color);
-    @include m.font-source-sans-pro(12, 16);
+    @include m.font-source-sans-pro(12, 14);
+    padding-right: 2px;
   }
   &__img {
     --size: 40px;

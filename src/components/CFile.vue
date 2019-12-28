@@ -6,11 +6,9 @@
 export default {
   name: 'CFile',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CFile.scss">

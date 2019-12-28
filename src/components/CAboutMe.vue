@@ -26,11 +26,9 @@
 export default {
   name: 'CAboutMe',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CAboutMe.scss">

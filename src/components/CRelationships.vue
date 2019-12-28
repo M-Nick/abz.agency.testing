@@ -50,11 +50,9 @@
 export default {
   name: 'CRelationships',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CRelationships.scss">

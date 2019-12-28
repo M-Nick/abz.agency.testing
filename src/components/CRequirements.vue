@@ -38,11 +38,9 @@
 export default {
   name: 'CRequirements',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CRequirements.scss">

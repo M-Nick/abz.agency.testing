@@ -10,11 +10,9 @@
 export default {
   name: 'CInput',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CInput.scss">

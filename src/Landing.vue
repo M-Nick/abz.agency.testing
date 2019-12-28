@@ -57,6 +57,9 @@ input {
   background: none;
   border: none;
 }
+ul {
+  list-style: none;
+}
 #app {
   position: relative;
   margin: auto;

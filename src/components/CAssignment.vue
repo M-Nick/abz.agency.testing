@@ -18,11 +18,9 @@
 export default {
   name: 'CAssignment',
   data() {
-    return {
-
-    };
+    return {}
   },
-};
+}
 </script>
 
 <style scoped lang="scss" src="@/styles/components/CAssignment.scss">

@@ -85,6 +85,8 @@
   border-radius: 5px;
   cursor: pointer;
   &--primary {
+    padding-left: 1px;
+    padding-bottom: 1px;
     background-color: var(--prim-color);
     color: var(--prewhite-color);
     &:hover {
