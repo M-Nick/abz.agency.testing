@@ -16,12 +16,14 @@
         />
         <CInput
           type="email"
+          placeholder="Your email"
           label="Email"
           v-model="registrationData.email"
           class="register__input"
         />
         <CInput
           type="tel"
+          placeholder="Your phone"
           label="Phone"
           v-model="registrationData.phone"
           class="register__input"

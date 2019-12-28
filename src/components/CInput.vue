@@ -1,7 +1,7 @@
 <template>
   <label class="input">
-    <input placeholder="Label text" class="input__input" :type="type" />
-    <span class="input__name">{{ label }}</span>
+    <input :placeholder="placeholder" class="input__input" :type="type" />
+    <span class="input__label">{{ label }}</span>
     <span class="input__assistive">{{ assistive }}</span>
   </label>
 </template>
@@ -23,6 +23,10 @@ export default {
       default: false,
     },
     label: {
+      type: String,
+      default: '',
+    },
+    placeholder: {
       type: String,
       default: '',
     },

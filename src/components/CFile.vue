@@ -1,5 +1,13 @@
 <template>
-  <div @click="handleClick" ref="customFile" tabindex="0" class="file">
+  <div
+    @click="handleProcess"
+    @keydown.enter="handleProcess"
+    @keydown.space="handleProcess"
+    ref="customFile"
+    tabindex="0"
+    class="file"
+    :class="generalClass()"
+  >
     <input
       @change="handleChange"
       accept=".jpg,.jpeg"
@@ -30,6 +38,7 @@ export default {
   data() {
     return {
       placeholder: 'Upload your photo',
+      error: false,
     }
   },
   computed: {
@@ -38,17 +47,27 @@ export default {
     },
   },
   methods: {
+    generalClass() {
+      let result = ''
+      result += this.error ? ' file--error' : ''
+      return result
+    },
     nameClass() {
       let result = ''
       result += this.value === null ? ' file__name--placeholder' : ''
       return result
     },
-    handleClick(e) {
+    handleProcess(e) {
       this.$refs.nativeFile.click()
     },
     checkSize(file) {
       const maxSize = 1024 ** 2 * 5
       return file.size <= maxSize
+    },
+    checkExtension(file) {
+      const extensions = ['.jpg', '.jpeg',]
+      const name = file.name.toLowerCase()
+      return extensions.reduce((res, cur) => res || name.endsWith(cur), false)
     },
     checkResolution(file) {
       const self = this
@@ -63,18 +82,18 @@ export default {
     async handleChange(e) {
       if (e && e.target && e.target.files && e.target.files.length > 0) {
         const file = await e.target.files[0]
-        if (this.checkSize(file)) {
+        if (this.checkSize(file) && this.checkExtension(file)) {
           this.checkResolution(file)
         } else {
+          this.error = true
         }
       }
     },
     reactOnResolution(checked, file) {
-      console.log(arguments)
       if (checked) {
         this.$emit('input', file)
       } else {
-        console.error('File is too small')
+        this.error = true
       }
     },
   },

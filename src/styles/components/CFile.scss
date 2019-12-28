@@ -5,12 +5,20 @@
   display: flex;
   position: relative;
   cursor: pointer;
+  outline: none;
   --color: var(--grey-color);
   &--error {
     --color: var(--error-color);
     .file__name {
       border-color: var(--error-color);
     }
+    .file__assistive {
+      animation: heartBeat 2s linear;
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 2px 1px var(--outline-color);
+    box-shadow: 0 0 2px 2px -webkit-focus-ring-color;
   }
   &__name {
     $height: 56;
