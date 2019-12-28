@@ -4117,6 +4117,11 @@ inherits@2.0.3:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
   integrity sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
 
+inputmask@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/inputmask/-/inputmask-5.0.1.tgz#32acf45c3b3600ba7760fcd90fef3f40362b5e23"
+  integrity sha512-Q/xo98j2gKycYSpYAjbxr4KEtLGZeBgxefc1u+qvrQKvB5MwP21EXEfjDKb+rMQdhNgjzHuKw7PCkOKyQ9FaRQ==
+
 inquirer@^7.0.0:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.0.1.tgz#13f7980eedc73c689feff3994b109c4e799c6ebb"

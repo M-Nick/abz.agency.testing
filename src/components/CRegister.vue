@@ -23,8 +23,9 @@
         />
         <CInput
           type="tel"
-          placeholder="Your phone"
+          placeholder="+38 (___) ___ __ __"
           label="Phone"
+          mask="+38 (999) 999 99 99"
           v-model="registrationData.phone"
           class="register__input"
         />
