@@ -15,6 +15,8 @@
       tabindex="-1"
       type="file"
       class="visually-hidden"
+      :name="name"
+      required
     />
     <div class="file__name" :class="nameClass()">{{ text }}</div>
     <div class="file__button button button--secondary">Upload</div>
@@ -31,6 +33,10 @@ export default {
       default: null,
     },
     assistive: {
+      type: String,
+      default: '',
+    },
+    name: {
       type: String,
       default: '',
     },
@@ -57,7 +63,7 @@ export default {
       result += this.value === null ? ' file__name--placeholder' : ''
       return result
     },
-    handleProcess(e) {
+    handleProcess() {
       this.$refs.nativeFile.click()
     },
     checkSize(file) {
@@ -85,16 +91,25 @@ export default {
         if (this.checkSize(file) && this.checkExtension(file)) {
           this.checkResolution(file)
         } else {
-          this.error = true
+          this.errorFile()
         }
       }
     },
     reactOnResolution(checked, file) {
       if (checked) {
         this.$emit('input', file)
+        this.error = false
+        this.correctFile()
       } else {
-        this.error = true
+        this.errorFile()
       }
+    },
+    errorFile() {
+      this.$refs.input.value = ''
+      this.error = true
+    },
+    correctFile() {
+      this.error = false
     },
   },
 }

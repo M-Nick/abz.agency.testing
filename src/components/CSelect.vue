@@ -1,5 +1,18 @@
 <template>
   <div class="select">
+    <select
+      tabindex="-1"
+      :name="name"
+      :value="currentOption.id"
+      class="visually-hidden"
+      required
+    >
+      <option
+        v-for="option in options"
+        :key="option.id"
+        :value="option.id"
+      ></option>
+    </select>
     <div tabindex="0" ref="select" class="select__select">
       {{ currentOption.name }}
     </div>
@@ -34,6 +47,10 @@ export default {
   name: 'CSelect',
   props: {
     placeholder: {
+      type: String,
+      default: '',
+    },
+    name: {
       type: String,
       default: '',
     },
@@ -153,10 +170,12 @@ export default {
 
     handleSelectMouseDown(e) {
       e.stopPropagation()
-      if (this.opened) {
-        this.handleClose()
-      } else {
-        this.handleOpen()
+      if (e.button === 0) {
+        if (this.opened) {
+          this.handleClose()
+        } else {
+          this.handleOpen()
+        }
       }
     },
 
@@ -268,7 +287,7 @@ export default {
   },
   watch: {
     currentOptionIndex(curr, prev) {
-      this.$emit('input', curr)
+      this.$emit('input', this.options[curr].id)
     },
   },
 }

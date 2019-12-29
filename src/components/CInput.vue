@@ -1,10 +1,10 @@
 <template>
-  <label class="input">
+  <label class="input" :class="rootClass()">
     <input
       ref="input"
-      :placeholder="placeholder"
       class="input__input"
-      :type="type"
+      @change="handleInput"
+      @input="handleInput"
     />
     <span class="input__label">{{ label }}</span>
     <span class="input__assistive">{{ assistive }}</span>
@@ -17,27 +17,15 @@ import Inputmask from 'inputmask'
 export default {
   name: 'CInput',
   props: {
-    type: {
-      type: String,
-      default: 'text',
+    attributes: {
+      type: Object,
+      default: () => ({}),
     },
     value: {
       type: String,
       default: '',
     },
-    error: {
-      type: Boolean,
-      default: false,
-    },
     label: {
-      type: String,
-      default: '',
-    },
-    placeholder: {
-      type: String,
-      default: '',
-    },
-    assistive: {
       type: String,
       default: '',
     },
@@ -47,17 +35,43 @@ export default {
     },
   },
   data() {
-    return {}
+    return {
+      assistive: '',
+      isError: false,
+    }
   },
   mounted() {
+    this.setAttributes()
     this.setMask()
   },
   methods: {
+    rootClass() {
+      let result = ''
+      result += this.isError ? ' input--error' : ''
+      return result
+    },
+    setAttributes() {
+      Object.keys(this.attributes).forEach((key) =>
+        this.$refs.input.setAttribute(key, this.attributes[key])
+      )
+    },
     setMask() {
       if (this.mask) {
         let im = new Inputmask(this.mask)
         im.mask(this.$refs.input)
       }
+    },
+    handleInput() {
+      this.resetError()
+      this.$emit('input', this.$refs.input.value)
+    },
+    error(message) {
+      this.isError = true
+      this.assistive = message
+    },
+    resetError() {
+      this.isError = false
+      this.assistive = ''
     },
   },
 }

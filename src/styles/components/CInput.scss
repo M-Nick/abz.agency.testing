@@ -54,13 +54,15 @@
     transition: opacity 0.2s ease-in-out;
   }
   &__assistive {
+    --left: 18px;
     @include m.font-source-sans-pro(12, 16);
     white-space: nowrap;
     color: var(--color);
     position: absolute;
-    left: 18px;
-    user-select: none;
-    pointer-events: none;
+    left: var(--left);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - var(--left));
   }
 
   &__input:not(:placeholder-shown) ~ &__label {
