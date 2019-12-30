@@ -1,0 +1,49 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+
+.alert {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--grey-opacity);
+  }
+  &__modal {
+    animation: fadeIn 0.3s linear; // delay iteration-count direction fill-mode;
+    position: absolute;
+    width: f.cols(4, 3);
+    background-color: var(--bg-color);
+    padding: 24px 24px 25px 23px;
+    border-radius: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    position: relative;
+    @include m.font-h4(desktop);
+    margin-bottom: 15px;
+  }
+  &__text {
+    position: relative;
+    color: var(--option-color);
+    @include m.font-p2;
+    margin-bottom: 35px;
+  }
+  &__button {
+    position: relative;
+    left: 100%;
+    transform: translateX(-100%);
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+  }
+}
