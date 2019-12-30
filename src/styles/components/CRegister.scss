@@ -2,7 +2,7 @@
 @use "../default/mixins" as m;
 
 .register {
-  padding: 0 47px;
+  padding: 0 var(--padding-side);
   margin-bottom: 139px;
   &__header {
     @include m.font-h2(desktop);
@@ -21,13 +21,13 @@
     margin-bottom: 20px;
   }
   &__input {
-    width: f.cols(4, 3);
+    width: f.cols(desktop, 4, 3);
   }
   &__select {
-    width: f.cols(6, 5);
+    width: f.cols(desktop, 6, 5);
   }
   &__file {
-    width: f.cols(6, 5);
+    width: f.cols(desktop, 6, 5);
   }
   &__button {
     position: relative;
@@ -36,6 +36,33 @@
     margin-top: 60px;
     &:disabled {
       pointer-events: all;
+    }
+  }
+}
+
+@media (max-width: 1039px) {
+  .register {
+    margin-bottom: 120px;
+    &__header {
+      @include m.font-h2(tablet);
+      margin-bottom: 22px;
+    }
+    &__title {
+      position: relative;
+      width: f.cols(tablet, 6, 12);
+      @include m.font-source-sans-pro(18, 21);
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 42px;
+    }
+    &__input {
+      width: f.cols(tablet, 4, 6) + 2px;
+    }
+    &__select {
+      width: f.cols(tablet, 6, 10);
+    }
+    &__file {
+      width: f.cols(tablet, 6, 10);
     }
   }
 }

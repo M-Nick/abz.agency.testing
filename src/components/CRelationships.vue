@@ -4,42 +4,20 @@
       About my relationships with web-development
     </div>
     <div class="relates__body">
-      <article class="relates__tech">
+      <article
+        v-for="(skill, index) in skills"
+        :key="index"
+        class="relates__tech"
+      >
         <img
-          src="@/assets/html.svg"
-          alt="html logo"
-          class="relates__logo relates__logo--smaller"
-        />
-        <div class="relates__title">I'm in love with HTML</div>
-        <div class="relates__text">
-          Hypertext Markup Language (HTML) is the standard markup language for
-          creating web pages and web applications.
-        </div>
-      </article>
-      <article class="relates__tech">
-        <img
-          src="@/assets/css.svg"
-          alt="css logo"
-          class="relates__logo relates__logo--smaller"
-        />
-        <div class="relates__title">CSS is my best friend</div>
-        <div class="relates__text relates__text--short">
-          Cascading Style Sheets (CSS) <br />is a style sheet language used for
-          describing the presentation of a document written in a markup language
-          like HTML.
-        </div>
-      </article>
-      <article class="relates__tech">
-        <img
-          src="@/assets/javascript.svg"
-          alt="javascript logo"
+          :src="skill.src"
+          :alt="skill.alt"
           class="relates__logo"
+          :class="skill.class"
         />
-        <div class="relates__title">JavaScript is my passion</div>
-        <div class="relates__text">
-          JavaScript is a high-level, interpreted programming language. It is a
-          language which is also characterized as dynamic, weakly typed,
-          prototype-based and <br />multi-paradigm.
+        <div class="relates__info">
+          <div class="relates__title" v-html="skill.title"></div>
+          <div class="relates__text" v-html="skill.text"></div>
         </div>
       </article>
     </div>
@@ -50,7 +28,34 @@
 export default {
   name: 'CRelationships',
   data() {
-    return {}
+    return {
+      skills: [
+        {
+          src: require('@/assets/html.svg'),
+          alt: 'html logo',
+          title: 'I\'m in love with HTML',
+          text:
+            'Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.',
+          class: 'relates__logo--smaller',
+        },
+        {
+          src: require('@/assets/css.svg'),
+          alt: 'css logo',
+          title: 'CSS is my best friend',
+          text:
+            'Cascading Style Sheets (CSS) <br />is a style sheet language used for describing the presentation of a document written in a markup language like HTML.',
+          class: 'relates__logo--smaller',
+        },
+        {
+          src: require('@/assets/javascript.svg'),
+          alt: 'javascript logo',
+          title: 'JavaScript is my passion',
+          text:
+            'JavaScript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and <br />multi-paradigm.',
+          class: '',
+        },
+      ],
+    }
   },
 }
 </script>

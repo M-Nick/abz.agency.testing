@@ -2,7 +2,7 @@
 @use '../default/mixins' as m;
 
 .users {
-  padding: 0 47px;
+  padding: 0 var(--padding-side);
   margin-bottom: 154px;
   &__header {
     text-align: center;
@@ -20,10 +20,10 @@
     flex-wrap: wrap;
   }
   &__user {
-    width: f.cols(4, 3);
+    width: f.cols(desktop, 4, 3);
     display: flex;
     justify-content: space-between;
-    margin-right: f.cols(0, 1);
+    margin-right: f.cols(desktop, 0, 1);
     margin-bottom: 60px;
     &:nth-child(3n) {
       margin-right: 0;
@@ -37,7 +37,7 @@
     object-fit: cover;
   }
   &__info {
-    width: f.cols(3, 2);
+    width: f.cols(desktop, 3, 2);
     margin-top: 25px;
   }
   &__name {
@@ -69,5 +69,56 @@
     margin-top: -6px;
     left: 50%;
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1039px) {
+  .users {
+    margin-bottom: 134px;
+    &__header {
+      @include m.font-h2(tablet);
+      margin-bottom: 11px;
+    }
+    &__title {
+      @include m.font-p1;
+      letter-spacing: 0.002em;
+      margin-bottom: 37px;
+    }
+    &__group {
+    }
+    &__user {
+      width: f.cols(tablet, 4, 6);
+      flex-direction: column;
+      align-items: center;
+      margin-right: f.cols(tablet, 0, 2);
+    }
+    &__avatar {
+      --size: 70px;
+    }
+    &__info {
+      margin-top: 13px;
+    }
+    &__name {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    &__position {
+      margin-bottom: 0px;
+      text-align: center;
+      @include m.font-source-sans-pro(14, 17);
+    }
+    &__email {
+      margin-bottom: 0px;
+      text-align: center;
+      @include m.font-source-sans-pro(14, 17);
+    }
+    &__phone {
+      margin-bottom: 6px;
+      text-align: center;
+      @include m.font-source-sans-pro(14, 17);
+    }
+    &__button {
+    }
   }
 }

@@ -4,7 +4,7 @@
 .reqs {
   position: relative;
   height: 755px;
-  padding: 134px 47px;
+  padding: 134px var(--padding-side);
   width: var(--max-width);
   margin-bottom: 135px;
   &__bg {
@@ -33,7 +33,7 @@
     color: var(--prewhite-color);
   }
   &__info {
-    width: f.cols(6, 5);
+    width: f.cols(desktop, 6, 5);
     width: 447px;
   }
   &__p {
@@ -47,5 +47,41 @@
     height: 362.4px;
     top: 15px;
     left: 1px;
+    &--v {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1039px) {
+  .reqs {
+    padding-top: 114px;
+    height: 878px;
+    margin-bottom: 114px;
+    &__bg {
+      background-position: -281px 0;
+      background-size: 1321px 880px;
+    }
+    &__header {
+      width: 414px;
+      @include m.font-h2(tablet);
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 25px;
+    }
+    &__info {
+      width: f.cols(tablet, 6, 10);
+      margin-top: 11px;
+    }
+    &__img {
+      width: 343px;
+      height: 407px;
+      &--h {
+        display: none;
+      }
+      &--v {
+        display: block;
+      }
+    }
   }
 }

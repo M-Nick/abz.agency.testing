@@ -1,16 +1,31 @@
-$_big_size: 50;
-$_small_size: 30;
+@use "sass:map";
 
-@function cols($big, $small) {
+@function sizes($device) {
+  @if $device == twoK {
+    @return ('big': 50, 'small': 30);
+  }
+  @if $device == desktop {
+    @return ('big': 50, 'small': 30);
+  }
+  @if $device == tablet {
+    @return ('big': 32, 'small': 15);
+  }
+  @if $device == mobile {
+    @return ('big': 50, 'small': 30);
+  }
+}
+
+@function cols($device, $big, $small) {
   $result: 0;
+  $sizes: sizes($device);
   @if $big > 0 {
     @for $_ from 1 through $big {
-      $result: $result + $_big_size;
+      $result: $result + map.get($sizes, 'big');
     }
   }
   @if $small > 0 {
     @for $_ from 1 through $small {
-      $result: $result + $_small_size;
+      $result: $result + map.get($sizes, 'small');
     }
   }
   $result: $result * 1px;

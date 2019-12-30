@@ -16,6 +16,9 @@
       padding: 0 4px;
       left: 14px;
     }
+    .input__input {
+      border-color: var(--color);
+    }
   }
   &__input {
     @include m.font-p2;
@@ -23,7 +26,7 @@
     position: relative;
     display: block;
     height: 56px;
-    border: 1px solid var(--color);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 0 17px;
     outline: none;

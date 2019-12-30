@@ -2,7 +2,9 @@
 @use "../default/mixins" as m;
 
 .assignment {
-  padding: 133px 0 133px 46px;
+  --padding-vertical: 133px;
+  padding: var(--padding-vertical) var(--padding-side) var(--padding-vertical)
+    calc(var(--padding-side) - 1px);
   position: relative;
   width: var(--max-width);
   height: 725px;
@@ -22,7 +24,7 @@
   &__title {
     @include m.font-h1(desktop);
     position: relative;
-    width: f.cols(6, 5);
+    width: f.cols(desktop, 6, 5);
     color: var(--color-on-dark);
   }
   &__text {
@@ -30,12 +32,31 @@
     color: var(--color-on-dark);
     position: relative;
     left: 2px;
-    width: f.cols(6, 5);
+    width: f.cols(desktop, 6, 5);
     margin-top: 18px;
     margin-bottom: 40px;
   }
   &__sign-up {
     position: relative;
     left: 1px;
+  }
+}
+
+@media (max-width: 1039px) {
+  .assignment {
+    --padding-vertical: 114px;
+    height: 623px;
+    &__bg {
+      background-size: 974px 650px;
+    }
+    &__title {
+      @include m.font-h1(tablet);
+      width: f.cols(tablet, 7, 12);
+    }
+    &__text {
+      @include m.font-source-sans-pro(18, 24);
+      width: f.cols(tablet, 7, 12);
+      margin-bottom: 35px;
+    }
   }
 }

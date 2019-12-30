@@ -2,11 +2,11 @@
 @use "../default/mixins" as m;
 
 .relates {
-  padding: 24px 47px;
+  padding: 24px var(--padding-side);
   margin-bottom: 115px;
   &__header {
     @include m.font-h2(desktop);
-    width: f.cols(8, 7);
+    width: f.cols(desktop, 8, 7);
     text-align: center;
     margin: auto;
     margin-bottom: 45px;
@@ -15,8 +15,8 @@
     display: flex;
   }
   &__tech {
-    width: f.cols(4, 3);
-    margin-right: f.cols(0, 1);
+    width: f.cols(desktop, 4, 3);
+    margin-right: f.cols(desktop, 0, 1);
     &:last-child {
       margin-right: 0;
     }
@@ -38,7 +38,47 @@
     margin-left: 3px;
     color: var(--grey-text);
     &--short {
-      width: f.cols(3, 3);
+      width: f.cols(desktop, 3, 3);
+    }
+  }
+}
+
+@media (max-width: 1039px) {
+  .relates {
+    padding: 35.4px var(--padding-side);
+    margin-bottom: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__header {
+      @include m.font-h2(tablet);
+      margin-bottom: 42px;
+    }
+    &__body {
+      flex-direction: column;
+      width: f.cols(tablet, 10, 18);
+    }
+    &__tech {
+      width: 100%;
+      display: flex;
+      margin-bottom: 26px;
+    }
+    &__logo {
+      position: relative;
+      left: -1px;
+      width: 88px;
+      height: 100px;
+      margin-right: 34px;
+      margin-top: 2px;
+      &--smaller {
+      }
+    }
+    &__title {
+      margin-bottom: 5px;
+    }
+    &__text {
+      &--short {
+      }
     }
   }
 }

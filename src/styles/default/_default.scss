@@ -81,7 +81,7 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: f.cols(4, 3);
+  width: f.cols(desktop, 4, 3);
   border-radius: 5px;
   cursor: pointer;
   &--primary {

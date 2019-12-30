@@ -28,7 +28,12 @@
       <img
         src="@/assets/man-laptop-h.svg"
         alt="man with laptop"
-        class="reqs__img"
+        class="reqs__img reqs__img--h"
+      />
+      <img
+        src="@/assets/man-laptop-v.svg"
+        alt="man with laptop"
+        class="reqs__img reqs__img--v"
       />
     </div>
   </section>

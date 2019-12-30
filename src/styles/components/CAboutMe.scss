@@ -2,7 +2,7 @@
 @use "../default/mixins" as m;
 
 .about {
-  padding: 134px 47px 100px 47px;
+  padding: 134px var(--padding-side) 100px var(--padding-side);
   &__header {
     @include m.font-h2(desktop);
     text-align: center;
@@ -31,5 +31,35 @@
     width: 612px;
     margin-left: 2px;
     margin-bottom: 22px;
+  }
+}
+
+@media (max-width: 1039px) {
+  .about {
+    padding: 113px var(--padding-side) 100px var(--padding-side);
+    &__header {
+      @include m.font-h2(tablet);
+      margin-bottom: 21px;
+    }
+    &__img {
+      width: f.cols(tablet, 4, 6);
+      height: 216px;
+      margin-top: 23px;
+    }
+    &__info {
+      width: f.cols(tablet, 8, 14);
+    }
+    &__title {
+      margin-left: 1.3px;
+      @include m.font-h3(tablet);
+      margin-bottom: 11px;
+    }
+    &__text {
+      @include m.font-p2;
+      width: 100%;
+    }
+    &__link {
+      margin-left: 1px;
+    }
   }
 }

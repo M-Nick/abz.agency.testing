@@ -2,11 +2,9 @@
 @use "../default/mixins" as m;
 
 .footer {
-  --padding-left: 47px;
-  --padding-right: 47px;
   position: relative;
-  padding-left: var(--padding-left);
-  padding-right: var(--padding-right);
+  padding-left: var(--padding-side);
+  padding-right: var(--padding-side);
   padding-bottom: 31px;
   background-color: var(--footer-bg);
   &__top {
@@ -42,8 +40,8 @@
     background-color: var(--footer-line);
     border: none;
     position: relative;
-    left: calc(-1 * var(--padding-left));
-    width: calc(100% + var(--padding-left) + var(--padding-right));
+    left: calc(-1 * var(--padding-side));
+    width: calc(100% + var(--padding-side) + var(--padding-side));
   }
   &__middle {
     position: relative;
@@ -101,11 +99,8 @@
   &__content {
     position: relative;
     top: -1px;
-    width: f.cols(2, 2);
+    width: f.cols(desktop, 2, 2);
     text-align: right;
-    &:last-child {
-      margin-right: 0;
-    }
   }
   &__link {
     @include m.font-p2;
@@ -132,6 +127,40 @@
     svg {
       height: 26px;
       width: 26px;
+    }
+  }
+}
+
+@media (max-width: 1039px) {
+  .footer {
+    &__logo {
+      position: relative;
+      left: -2px;
+    }
+    &__contacts {
+      margin: 1px;
+      margin-left: 1px;
+    }
+    &__contact {
+      @include m.font-source-sans-pro(18, 24);
+      svg {
+        display: none;
+      }
+    }
+    &__content {
+      width: f.cols(tablet, 2, 4);
+    }
+    &__bottom {
+      margin-top: 23px;
+    }
+    &__copyright {
+      margin-top: 2px;
+    }
+    &__socials {
+    }
+    &__social {
+      svg {
+      }
     }
   }
 }

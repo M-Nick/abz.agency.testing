@@ -1,6 +1,7 @@
 :root {
   --header-h: 64px;
   --max-width: 1024px;
+  --padding-side: 47px;
 
   --default-text-color: #000000;
 
@@ -31,4 +32,19 @@
   --footer-line: #5674b9;
 
   --outline-color: #5e9ed6;
+}
+
+@media (max-width: 1039px) {
+  :root {
+    --header-h: 64px;
+    --max-width: 768px;
+    --padding-side: 24px;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    --header-h: 64px;
+    --max-width: 320px;
+    --padding-side: 15px;
+  }
 }

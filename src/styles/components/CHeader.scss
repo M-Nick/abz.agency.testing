@@ -11,9 +11,9 @@
   height: var(--header-h);
   margin: auto;
   background-color: var(--bg-color);
-  padding: 0 47px;
+  padding: 0 var(--padding-side);
   &__logo {
-    width: f.cols(2, 2);
+    width: f.cols(desktop, 2, 2);
     height: 24px;
     svg {
       height: 100%;
@@ -23,7 +23,7 @@
   &__links {
     position: relative;
     top: -2px;
-    width: f.cols(7, 6);
+    width: f.cols(desktop, 7, 6);
     padding: 0 35px 0 41.4px;
   }
   &__list {
@@ -40,11 +40,11 @@
     @include m.font-p2;
   }
   &__user {
-    width: f.cols(3, 2);
+    width: f.cols(desktop, 3, 2);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: f.cols(0, 1);
+    margin-left: f.cols(desktop, 0, 1);
     padding-right: 1px;
   }
   &__info {
@@ -75,5 +75,31 @@
   &__sign-out {
     width: 24px;
     height: 20px;
+  }
+  &__menu {
+    display: none;
+  }
+}
+
+@media (max-width: 1039px) {
+  .header {
+    justify-content: space-between;
+    &__logo {
+      svg {
+      }
+    }
+    &__links {
+      display: none;
+    }
+    &__user {
+      display: none;
+    }
+    &__menu {
+      display: block;
+      width: 23px;
+      height: 22px;
+      background-color: transparent;
+      border: none;
+    }
   }
 }
