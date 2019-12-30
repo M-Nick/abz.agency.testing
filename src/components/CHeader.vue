@@ -56,14 +56,10 @@
     </nav>
     <div class="header__user">
       <div class="header__info">
-        <div class="header__username">Superstar</div>
-        <div class="header__email">Superstar@gmail.com</div>
+        <div class="header__username">{{ user.name }}</div>
+        <div class="header__email">{{ user.email }}</div>
       </div>
-      <img
-        src="@/assets/user-superstar-2x.jpg"
-        alt="superstar"
-        class="header__img"
-      />
+      <img :src="user.photo" :alt="user.name" class="header__img" />
       <a class="icon header__sign-out" href="#">
         <svg viewBox="0 0 24 20">
           <g stroke-width="1">
@@ -83,10 +79,29 @@
 </template>
 
 <script>
+import { url } from '@/configs/url.js'
+
 export default {
   name: 'CHeader',
   data() {
-    return {}
+    return {
+      id: 1,
+      user: {},
+    }
+  },
+  mounted() {
+    this.getUserRequest()
+  },
+  methods: {
+    async getUserRequest() {
+      const response = await fetch(url.get.user({ id: this.id }))
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success) {
+          this.user = data.user
+        }
+      }
+    },
   },
 }
 </script>
