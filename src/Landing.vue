@@ -36,7 +36,25 @@ export default {
     CFooter,
     CAlert,
   },
+  mounted() {
+    this.addTooltips()
+  },
   methods: {
+    mouseOverMoveHandler(e) {
+      const el = e.target
+      if (
+        el.offsetWidth + 3 < el.scrollWidth ||
+        el.offsetHeight + 3 < el.scrollHeight
+      ) {
+        el.title = el.textContent
+      } else {
+        el.title = ''
+      }
+    },
+    addTooltips() {
+      window.addEventListener('mouseover', this.mouseOverMoveHandler)
+      window.addEventListener('mousemove', this.mouseOverMoveHandler)
+    },
     alert(params) {
       this.$refs.alert.open(params)
     },
