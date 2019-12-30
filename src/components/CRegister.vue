@@ -152,10 +152,10 @@ export default {
         photo: null,
       }
     },
-    handleSubmit(e) {
+    async handleSubmit(e) {
       e.preventDefault()
       if (this.checkValidity()) {
-        if (this.register()) {
+        if (await this.register()) {
           this.reset(e.target)
         }
       }
@@ -168,8 +168,9 @@ export default {
     async register() {
       const token = await this.getTokenRequest()
       if (token) {
-        return this.postUsersRequest(token)
+        return await this.postUsersRequest(token)
       }
+      return false
     },
     async getTokenRequest() {
       const response = await fetch(url.get.token)
@@ -201,7 +202,7 @@ export default {
       })
       if (response.ok) {
         this.$emit('alert', {
-          title: 'congratulations',
+          title: 'Congratulations',
           text: 'You have successfully passed the registration',
           button: 'ok',
         })
