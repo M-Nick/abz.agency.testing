@@ -29,7 +29,7 @@ export default {
   name: 'CFile',
   props: {
     value: {
-      type: [File, null,],
+      type: [File, null],
       default: null,
     },
     assistive: {
@@ -71,7 +71,7 @@ export default {
       return file.size <= maxSize
     },
     checkExtension(file) {
-      const extensions = ['.jpg', '.jpeg',]
+      const extensions = ['.jpg', '.jpeg']
       const name = file.name.toLowerCase()
       return extensions.reduce((res, cur) => res || name.endsWith(cur), false)
     },

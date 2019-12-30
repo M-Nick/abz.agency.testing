@@ -142,16 +142,33 @@ export default {
       }
       return allValid
     },
+    reset(form) {
+      form.reset()
+      this.registrationData = {
+        name: '',
+        email: '',
+        phone: '',
+        position: null,
+        photo: null,
+      }
+    },
     handleSubmit(e) {
       e.preventDefault()
       if (this.checkValidity()) {
-        this.register()
+        if (this.register()) {
+          this.reset(e.target)
+        }
       }
+    },
+    setServerFails(fails) {
+      Object.keys(fails).forEach((name) =>
+        this.$refs[name].error(fails[name].join('\n'))
+      )
     },
     async register() {
       const token = await this.getTokenRequest()
       if (token) {
-        this.postUsersRequest(token)
+        return this.postUsersRequest(token)
       }
     },
     async getTokenRequest() {
@@ -164,23 +181,42 @@ export default {
       }
       return null
     },
-    async postUsersRequest(token) {
+    makeFormData() {
       let formData = new FormData()
-      // file from input type='file'
       formData.append('position_id', this.registrationData.position)
       formData.append('name', this.registrationData.name)
       formData.append('email', this.registrationData.email)
       formData.append('phone', this.formatPhone)
       formData.append('photo', this.registrationData.photo)
-
+      return formData
+    },
+    async postUsersRequest(token) {
+      const data = this.makeFormData()
       const response = await fetch(url.post.users, {
         method: 'POST',
-        body: formData,
+        body: data,
         headers: {
-          Token: token, // get token with GET api/v1/token method
+          Token: token,
         },
       })
-      console.log(response)
+      if (response.ok) {
+        this.$emit('alert', {
+          title: 'congratulations',
+          text: 'You have successfully passed the registration',
+          button: 'ok',
+        })
+        return true
+      } else {
+        const status = response.status
+        const data = await response.json()
+        this.$emit('alert', {
+          title: status,
+          text: data.message,
+          button: 'ok',
+        })
+        this.setServerFails(data.fails)
+        return false
+      }
     },
   },
 }

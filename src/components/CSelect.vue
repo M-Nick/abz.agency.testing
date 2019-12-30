@@ -59,7 +59,7 @@ export default {
       default: () => [],
     },
     value: {
-      type: [Number, String,],
+      type: [Number, String],
       default: null,
     },
   },
@@ -92,14 +92,14 @@ export default {
         },
       ],
       eventsToSelect: [
-        { name: 'mousedown', handler: this.handleOptionMouseDown, },
+        { name: 'mousedown', handler: this.handleOptionMouseDown },
       ],
     }
   },
   computed: {
     currentOption() {
       return this.currentOptionIndex === null
-        ? { name: this.placeholder, id: null, }
+        ? { name: this.placeholder, id: null }
         : this.options[this.currentOptionIndex]
     },
   },
@@ -181,7 +181,7 @@ export default {
 
     handleSelectKeyDown(e) {
       if (e && e.code) {
-        const keys = ['Space', 'Enter',]
+        const keys = ['Space', 'Enter']
         if (keys.includes(e.code) && !this.opened) {
           e.preventDefault()
           e.stopPropagation()
@@ -245,7 +245,7 @@ export default {
 
     handleWindowKeyDown(e) {
       if (e && e.code) {
-        const codesToClose = ['Tab', 'Escape', 'Enter',]
+        const codesToClose = ['Tab', 'Escape', 'Enter']
         if (codesToClose.includes(e.code)) {
           e.preventDefault()
           this.handleClose()
@@ -285,9 +285,20 @@ export default {
       )
     },
   },
+
   watch: {
-    currentOptionIndex(curr, prev) {
-      this.$emit('input', this.options[curr].id)
+    currentOptionIndex(curr) {
+      if (curr !== null) {
+        this.$emit('input', this.options[curr].id)
+      } else {
+        this.$emit('input', null)
+      }
+    },
+
+    value(curr) {
+      if (curr === null) {
+        this.currentOptionIndex = null
+      }
     },
   },
 }

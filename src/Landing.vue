@@ -6,8 +6,9 @@
     <CRelationships />
     <CRequirements />
     <CUsers />
-    <CRegister />
+    <CRegister @alert="alert" />
     <CFooter />
+    <CAlert ref="alert" />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import CRequirements from '@/components/CRequirements'
 import CUsers from '@/components/CUsers'
 import CRegister from '@/components/CRegister'
 import CFooter from '@/components/CFooter'
+import CAlert from '@/components/CAlert'
 
 export default {
   name: 'app',
@@ -32,6 +34,12 @@ export default {
     CUsers,
     CRegister,
     CFooter,
+    CAlert,
+  },
+  methods: {
+    alert(params) {
+      this.$refs.alert.open(params)
+    },
   },
 }
 </script>
