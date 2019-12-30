@@ -157,6 +157,7 @@ export default {
       if (this.checkValidity()) {
         if (await this.register()) {
           this.reset(e.target)
+          this.$emit('registered')
         }
       }
     },

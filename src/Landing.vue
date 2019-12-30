@@ -5,8 +5,8 @@
     <CAboutMe />
     <CRelationships />
     <CRequirements />
-    <CUsers />
-    <CRegister @alert="alert" />
+    <CUsers ref="users" />
+    <CRegister @registered="resetUsers" @alert="alert" />
     <CFooter />
     <CAlert ref="alert" />
   </div>
@@ -39,6 +39,9 @@ export default {
   methods: {
     alert(params) {
       this.$refs.alert.open(params)
+    },
+    resetUsers() {
+      this.$refs.users.reset()
     },
   },
 }

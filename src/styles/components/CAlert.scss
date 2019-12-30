@@ -17,7 +17,7 @@
     background-color: var(--grey-opacity);
   }
   &__modal {
-    animation: fadeIn 0.3s linear; // delay iteration-count direction fill-mode;
+    animation: fadeIn 0.3s linear;
     position: absolute;
     width: f.cols(4, 3);
     background-color: var(--bg-color);
