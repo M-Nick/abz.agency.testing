@@ -66,3 +66,47 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .register {
+    margin-bottom: 70px;
+    &__header {
+      position: relative;
+      @include m.font-h2(mobile);
+      margin-bottom: 10px;
+      left: 1px;
+    }
+    &__title {
+      position: relative;
+      width: f.cols(mobile, 4, 6);
+      @include m.font-p2;
+      margin-bottom: 21px;
+      text-align: center;
+    }
+    &__fieldset {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 11px;
+    }
+    &__input {
+      width: unset;
+      margin-bottom: 24px;
+    }
+    &__select {
+      width: unset;
+      margin-bottom: 35px;
+    }
+    &__file {
+      width: unset;
+    }
+    &__button {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 64px;
+      &:disabled {
+        pointer-events: all;
+      }
+    }
+  }
+}

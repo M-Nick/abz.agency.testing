@@ -1,7 +1,10 @@
 <template>
   <section class="users">
     <h1 class="users__header">Our cheerful users</h1>
-    <p class="users__title">Attention! Sorting users by registration date</p>
+    <p class="users__title">
+      Attention! Sorting users <br class="mobile" />
+      by registration date
+    </p>
     <div class="users__group">
       <article v-for="(user, index) in users" :key="index" class="users__user">
         <img :src="user.photo" :alt="user.name" class="users__avatar" />

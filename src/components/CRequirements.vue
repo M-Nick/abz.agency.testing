@@ -15,14 +15,16 @@
           If you're a developer working on a site, now is a good time to
           evaluate your performance using our speed tools. Think about how
           performance affects the user experience of your pages and consider
-          measuring a variety of real-world user-centric performance metrics.
+          measuring a variety of real-world <br class="mobile" />
+          user-centric performance metrics.
         </p>
         <p class="reqs__p">
           Are you shipping too much JavaScript? Too many images? Images and
           JavaScript are the most significant contributors to the page weight
           that affect page load time based on data from HTTP Archive and the
           Chrome User Experience Report - our public dataset for key UX metrics
-          as experienced by Chrome users under real-world conditions.
+          as experienced by Chrome users under <br class="mobile" />
+          real-world conditions.
         </p>
       </div>
       <img

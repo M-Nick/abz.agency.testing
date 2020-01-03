@@ -103,3 +103,27 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    &__logo {
+      svg {
+        margin-left: 2px;
+      }
+    }
+    &__links {
+      display: none;
+    }
+    &__user {
+      display: none;
+    }
+    &__menu {
+      display: block;
+      width: 23px;
+      height: 22px;
+      background-color: transparent;
+      border: none;
+    }
+  }
+}

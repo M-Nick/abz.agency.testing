@@ -1,8 +1,9 @@
 @use "sass:map";
 
+// sizes of columns in
 @function sizes($device) {
   @if $device == twoK {
-    @return ('big': 50, 'small': 30);
+    @return ('big': 68, 'small': 15);
   }
   @if $device == desktop {
     @return ('big': 50, 'small': 30);
@@ -11,10 +12,11 @@
     @return ('big': 32, 'small': 15);
   }
   @if $device == mobile {
-    @return ('big': 50, 'small': 30);
+    @return ('big': 50, 'small': 15);
   }
 }
 
+// convert columns to px
 @function cols($device, $big, $small) {
   $result: 0;
   $sizes: sizes($device);

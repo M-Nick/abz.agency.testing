@@ -60,3 +60,31 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .assignment {
+    --padding-vertical: 67px;
+    height: 393px;
+    &__bg {
+      background-size: 650px 434px;
+      background-position: -127px -9px;
+    }
+    &__title {
+      text-align: center;
+      margin-left: 1px;
+      @include m.font-overpass(30, 34);
+      width: f.cols(mobile, 4, 6);
+    }
+    &__text {
+      @include m.font-p2;
+      width: f.cols(mobile, 4, 6);
+      margin-bottom: 38px;
+      margin-top: 10px;
+      text-align: center;
+    }
+    &__sign-up {
+      margin-left: 1px;
+      width: f.cols(mobile, 4, 6) - 1px;
+    }
+  }
+}

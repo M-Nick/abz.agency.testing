@@ -122,3 +122,36 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .users {
+    margin-bottom: 68px;
+    &__header {
+      @include m.font-h2(mobile);
+      margin-bottom: 12px;
+    }
+    &__title {
+      @include m.font-p2;
+      margin-bottom: 30px;
+    }
+    &__user {
+      width: f.cols(mobile, 4, 6);
+      margin-right: 0;
+      margin-bottom: 23px;
+    }
+    &__name {
+      margin-bottom: 4px;
+    }
+    &__position {
+      @include m.font-source-sans-pro(14, 17);
+      margin-bottom: 2px;
+    }
+    &__email {
+      @include m.font-source-sans-pro(14, 17);
+      margin-bottom: 2px;
+    }
+    &__phone {
+      @include m.font-source-sans-pro(14, 17);
+    }
+  }
+}

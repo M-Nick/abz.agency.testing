@@ -43,8 +43,9 @@ export default {
     mouseOverMoveHandler(e) {
       const el = e.target
       if (
-        el.offsetWidth + 3 < el.scrollWidth ||
-        el.offsetHeight + 3 < el.scrollHeight
+        (el.offsetWidth + 3 < el.scrollWidth ||
+          el.offsetHeight + 3 < el.scrollHeight) &&
+        el.children.length == 0
       ) {
         el.title = el.textContent
       } else {

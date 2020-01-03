@@ -69,3 +69,27 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .file {
+    &__name {
+      width: 234px;
+    }
+    &__button {
+      width: 56px;
+      height: 56px;
+    }
+    &__icon {
+      width: 20px;
+      height: 24px;
+      position: relative;
+      left: 1px;
+    }
+    &__assistive {
+      width: 225px;
+      white-space: normal;
+      margin-left: 1px;
+      @include m.font-source-sans-pro(12, 15);
+    }
+  }
+}

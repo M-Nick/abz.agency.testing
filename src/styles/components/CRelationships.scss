@@ -70,15 +70,48 @@
       height: 100px;
       margin-right: 34px;
       margin-top: 2px;
-      &--smaller {
-      }
     }
     &__title {
       margin-bottom: 5px;
     }
-    &__text {
-      &--short {
+  }
+}
+
+@media (max-width: 768px) {
+  .relates {
+    margin-bottom: 4px;
+    &__header {
+      width: 100%;
+      margin-bottom: 30px;
+      @include m.font-h2(mobile);
+    }
+    &__body {
+      width: f.cols(mobile, 4, 6);
+    }
+    &__tech {
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 29px;
+    }
+    &__logo {
+      left: calc(50% + 1px);
+      transform: translateX(-50%);
+      margin: 0;
+      margin-bottom: 12px;
+      &--js {
+        height: 106px;
       }
+    }
+    &__info {
+      text-align: center;
+    }
+    &__title {
+      @include m.font-h3(mobile);
+      margin-bottom: 1px;
+    }
+    &__text {
+      @include m.font-p2;
+      margin-left: 0;
     }
   }
 }
