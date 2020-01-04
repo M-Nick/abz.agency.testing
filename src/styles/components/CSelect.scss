@@ -83,6 +83,11 @@
 
 @media (min-width: size.$min-two-k) {
   .select {
+    &__select {
+      line-height: normal;
+      padding-top: 16px;
+      padding-left: 16px;
+    }
     &__caret {
       right: 13px;
     }

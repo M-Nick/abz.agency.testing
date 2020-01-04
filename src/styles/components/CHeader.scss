@@ -129,15 +129,18 @@
   .header {
     &__logo {
       position: relative;
-      top: -1px;
+      top: -0px;
     }
     &__links {
       padding-left: 148px;
       width: 740px;
       padding-right: 138px;
+      top: -1px;
     }
     &__user {
       padding-right: 0;
+      position: relative;
+      top: 1px;
     }
     &__img {
       position: relative;

@@ -159,10 +159,11 @@
     }
     &__title {
       @include m.font-p1;
+      margin-bottom: 53px;
     }
     &__user {
       width: f.cols(twoK, 4, 6);
-      margin-bottom: 77px;
+      margin-bottom: 83px;
       &:nth-last-child(1),
       &:nth-last-child(2),
       &:nth-last-child(3) {
