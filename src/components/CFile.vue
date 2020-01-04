@@ -119,7 +119,7 @@ export default {
       }
     },
     errorFile() {
-      this.$refs.input.value = ''
+      this.$refs.nativeFile.value = ''
       this.error = true
     },
     correctFile() {
