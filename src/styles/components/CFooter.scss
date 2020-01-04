@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .footer {
   position: relative;
@@ -131,7 +132,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .footer {
     &__logo {
       position: relative;
@@ -159,7 +160,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .footer {
     &__top {
       flex-direction: column;

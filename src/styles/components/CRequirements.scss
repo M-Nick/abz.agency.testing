@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .reqs {
   position: relative;
@@ -53,7 +54,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .reqs {
     padding-top: 114px;
     height: 878px;
@@ -86,7 +87,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .reqs {
     padding-top: 66px;
     height: 1031px;

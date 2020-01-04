@@ -3,7 +3,7 @@
 // sizes of columns in
 @function sizes($device) {
   @if $device == twoK {
-    @return ('big': 68, 'small': 15);
+    @return ('big': 67.5, 'small': 15);
   }
   @if $device == desktop {
     @return ('big': 50, 'small': 30);

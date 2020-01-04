@@ -1,3 +1,5 @@
+@use "../default/screen-size" as size;
+
 :root {
   --header-h: 64px;
   --max-width: 1024px;
@@ -34,17 +36,24 @@
   --outline-color: #5e9ed6;
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   :root {
     --header-h: 64px;
     --max-width: 768px;
     --padding-side: 24px;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   :root {
     --header-h: 64px;
     --max-width: 320px;
     --padding-side: 15px;
+  }
+}
+@media (min-width: 2560px) {
+  :root {
+    --header-h: 63px;
+    --max-width: 2560px;
+    --padding-side: 710px;
   }
 }

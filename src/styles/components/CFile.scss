@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .file {
   display: flex;
@@ -62,7 +63,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .file {
     &__button {
       width: f.cols(desktop, 2, 3) + 8px;
@@ -70,7 +71,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .file {
     &__name {
       width: 234px;

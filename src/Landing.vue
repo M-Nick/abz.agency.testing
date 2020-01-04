@@ -69,7 +69,7 @@ export default {
 <style lang="scss">
 @use "styles/default/default";
 @import url("./styles/default/fonts.css");
-@import url("./styles/default/global-vars.css");
+@import url("./styles/default/global-vars.scss");
 
 *,
 *::before,

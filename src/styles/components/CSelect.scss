@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .select {
   position: relative;
@@ -64,7 +65,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .select {
     &__caret {
       right: 10px;
@@ -72,7 +73,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .select {
     &__caret {
       right: 13px;

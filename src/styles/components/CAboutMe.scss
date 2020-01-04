@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .about {
   padding: 134px var(--padding-side) 100px var(--padding-side);
@@ -34,7 +35,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .about {
     padding: 113px var(--padding-side) 100px var(--padding-side);
     &__header {
@@ -64,7 +65,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .about {
     padding: 68px var(--padding-side) 34px var(--padding-side);
     &__header {

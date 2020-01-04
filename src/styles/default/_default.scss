@@ -1,5 +1,6 @@
 @use "mixins" as m;
 @use "functions" as f;
+@use "../default/screen-size" as size;
 
 .link {
   text-decoration: none;
@@ -133,7 +134,7 @@
 .desktop {
   display: unset;
 }
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .two-k {
     display: none;
   }
@@ -147,7 +148,7 @@
     display: unset;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .two-k {
     display: none;
   }

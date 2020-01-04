@@ -1,5 +1,6 @@
 @use '../default/functions' as f;
 @use '../default/mixins' as m;
+@use "../default/screen-size" as size;
 
 .users {
   padding: 0 var(--padding-side);
@@ -72,7 +73,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .users {
     margin-bottom: 134px;
     &__header {
@@ -83,8 +84,6 @@
       @include m.font-p1;
       letter-spacing: 0.002em;
       margin-bottom: 37px;
-    }
-    &__group {
     }
     &__user {
       width: f.cols(tablet, 4, 6);
@@ -118,12 +117,10 @@
       text-align: center;
       @include m.font-source-sans-pro(14, 17);
     }
-    &__button {
-    }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .users {
     margin-bottom: 68px;
     &__header {

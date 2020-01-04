@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .header {
   z-index: 200;
@@ -81,13 +82,9 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .header {
     justify-content: space-between;
-    &__logo {
-      svg {
-      }
-    }
     &__links {
       display: none;
     }
@@ -104,7 +101,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .header {
     justify-content: space-between;
     &__logo {

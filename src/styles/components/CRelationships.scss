@@ -1,5 +1,6 @@
 @use "../default/functions" as f;
 @use "../default/mixins" as m;
+@use "../default/screen-size" as size;
 
 .relates {
   padding: 24px var(--padding-side);
@@ -43,7 +44,7 @@
   }
 }
 
-@media (max-width: 1039px) {
+@media (max-width: size.$max-tablet) {
   .relates {
     padding: 35.4px var(--padding-side);
     margin-bottom: 42px;
@@ -77,7 +78,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: size.$max-mobile) {
   .relates {
     margin-bottom: 4px;
     &__header {
