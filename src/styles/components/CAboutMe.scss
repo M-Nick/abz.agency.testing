@@ -111,3 +111,34 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .about {
+    &__header {
+    }
+    &__body {
+    }
+    &__img {
+      margin-left: 35px;
+      margin-top: 24px;
+      margin-right: 64px;
+    }
+    &__info {
+      margin-top: 1px;
+      margin-left: 1px;
+      width: f.cols(twoK, 8, 14);
+    }
+    &__title {
+      margin-left: 0;
+    }
+    &__text {
+      margin-left: 1px;
+      width: unset;
+      &:last-of-type {
+        margin-bottom: 14px;
+      }
+    }
+    &__link {
+    }
+  }
+}

@@ -162,7 +162,7 @@
     display: unset;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: size.$min-two-k) {
   .desktop {
     display: none;
   }

@@ -89,3 +89,24 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .assignment {
+    padding-top: 134px;
+    height: 677px;
+    &__bg {
+      background-size: 2566px 1712px;
+      background-position: -5px -315px;
+    }
+    &__title {
+      left: -1px;
+    }
+    &__text {
+      width: f.cols(twoK, 6, 10);
+      left: 1px;
+      margin-bottom: 34px;
+    }
+    &__sign-up {
+    }
+  }
+}
