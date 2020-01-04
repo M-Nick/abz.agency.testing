@@ -1,4 +1,4 @@
-@use "../default/screen-size" as size;
+@use "screen-size" as size;
 
 :root {
   --header-h: 64px;
@@ -50,7 +50,7 @@
     --padding-side: 15px;
   }
 }
-@media (min-width: 2560px) {
+@media (min-width: #{size.$min-two-k}) {
   :root {
     --header-h: 64px;
     --max-width: 2560px;

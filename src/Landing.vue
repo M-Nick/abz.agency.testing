@@ -68,8 +68,8 @@ export default {
 
 <style lang="scss">
 @use "styles/default/default";
+@use "./styles/default/global-vars";
 @import url("./styles/default/fonts.css");
-@import url("./styles/default/global-vars.scss");
 
 *,
 *::before,

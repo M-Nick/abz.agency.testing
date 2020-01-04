@@ -247,25 +247,11 @@
       left: 50%;
       transform: translateX(-50%);
     }
-    &__middle {
-    }
-    &__contacts {
-    }
-    &__contact {
-      &:first-child {
-      }
-    }
     &__content {
       width: f.cols(twoK, 2, 4);
       &:nth-child(2n + 1) {
         left: 1px;
       }
-    }
-    &__bottom {
-    }
-    &__socials {
-    }
-    &__social {
     }
     &__copyright {
       margin-top: 4px;
