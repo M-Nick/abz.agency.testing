@@ -152,3 +152,25 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .users {
+    &__header {
+    }
+    &__title {
+      @include m.font-p1;
+    }
+    &__user {
+      width: f.cols(twoK, 4, 6);
+      margin-bottom: 77px;
+      &:nth-last-child(1),
+      &:nth-last-child(2),
+      &:nth-last-child(3) {
+        margin-bottom: 59px;
+      }
+    }
+    &__info {
+      width: f.cols(twoK, 3, 5) + 3px;
+    }
+  }
+}
