@@ -114,10 +114,8 @@
 
 @media (min-width: size.$min-two-k) {
   .about {
-    &__header {
-    }
-    &__body {
-    }
+    padding-bottom: 0;
+    margin-bottom: 52px;
     &__img {
       margin-left: 35px;
       margin-top: 24px;
@@ -137,8 +135,6 @@
       &:last-of-type {
         margin-bottom: 14px;
       }
-    }
-    &__link {
     }
   }
 }
