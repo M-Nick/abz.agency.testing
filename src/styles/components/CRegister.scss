@@ -105,9 +105,30 @@
       left: 50%;
       transform: translateX(-50%);
       margin-top: 64px;
-      &:disabled {
-        pointer-events: all;
-      }
+    }
+  }
+}
+
+@media (min-width: size.$min-two-k) {
+  .register {
+    margin-bottom: 149px;
+    &__title {
+      @include m.font-p1;
+      position: relative;
+      letter-spacing: 0.001em;
+      left: 0px;
+    }
+    &__input {
+      width: f.cols(twoK, 4, 6);
+    }
+    &__select {
+      width: f.cols(twoK, 6, 10);
+    }
+    &__file {
+      width: f.cols(twoK, 6, 10);
+    }
+    &__button {
+      margin-top: 62px;
     }
   }
 }

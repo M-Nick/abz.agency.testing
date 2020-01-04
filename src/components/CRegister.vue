@@ -3,7 +3,8 @@
     <h1 class="register__header">Register to get a work</h1>
     <div class="register__title">
       Attention! After successful registration and alert, update the list of
-      users<br class="mobile" />in the block from the top
+      users<br class="mobile" />
+      in the block from the top
     </div>
     <form @submit="handleSubmit" class="register__form" ref="form" novalidate>
       <div class="register__fieldset">

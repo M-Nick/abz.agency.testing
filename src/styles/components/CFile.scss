@@ -94,3 +94,27 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .file {
+    &__name {
+      width: 425px;
+    }
+    &__button {
+      width: 130px;
+      height: 56px;
+    }
+    &__icon {
+      width: 20px;
+      height: 24px;
+      position: relative;
+      left: 1px;
+    }
+    &__assistive {
+      width: 425px;
+      white-space: normal;
+      margin-left: 1px;
+      @include m.font-source-sans-pro(12, 15);
+    }
+  }
+}

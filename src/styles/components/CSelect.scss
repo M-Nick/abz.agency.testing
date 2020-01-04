@@ -80,3 +80,11 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .select {
+    &__caret {
+      right: 13px;
+    }
+  }
+}
