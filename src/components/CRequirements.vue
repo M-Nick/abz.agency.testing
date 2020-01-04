@@ -15,7 +15,7 @@
           If you're a developer working on a site, now is a good time to
           evaluate your performance using our speed tools. Think about how
           performance affects the user experience of your pages and consider
-          measuring a variety of real-world <br class="mobile" />
+          measuring a variety of real-world <br class="mobile two-k" />
           user-centric performance metrics.
         </p>
         <p class="reqs__p">

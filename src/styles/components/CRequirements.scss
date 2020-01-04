@@ -126,3 +126,23 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .reqs {
+    height: 692px;
+    &__bg {
+      background-position: -2px -463px;
+      background-size: 2564px 1711px;
+    }
+    &__body {
+      justify-content: flex-start;
+    }
+    &__info {
+      width: f.cols(twoK, 6, 10);
+      margin-right: 93px;
+    }
+    &__img {
+      top: 4px;
+    }
+  }
+}
