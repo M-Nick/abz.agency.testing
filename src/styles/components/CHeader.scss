@@ -124,3 +124,24 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .header {
+    &__logo {
+      position: relative;
+      top: -1px;
+    }
+    &__links {
+      padding-left: 148px;
+      width: 740px;
+      padding-right: 138px;
+    }
+    &__user {
+      padding-right: 0;
+    }
+    &__img {
+      position: relative;
+      left: -3px;
+    }
+  }
+}
