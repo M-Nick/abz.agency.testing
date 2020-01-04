@@ -116,3 +116,34 @@
     }
   }
 }
+
+@media (min-width: size.$min-two-k) {
+  .relates {
+    margin-bottom: 117px;
+    &__body {
+      position: relative;
+    }
+    &__tech {
+      width: f.cols(twoK, 4, 6);
+      margin-right: f.cols(twoK, 0, 2);
+      &:nth-child(2) {
+        .relates__text {
+          width: f.cols(twoK, 3, 6) + 20px;
+        }
+        .relates__logo {
+          position: relative;
+          left: 1.4px;
+          width: 97px;
+          height: 110px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+    &__title {
+      left: 1px;
+    }
+    &__text {
+      margin-left: 0;
+    }
+  }
+}
