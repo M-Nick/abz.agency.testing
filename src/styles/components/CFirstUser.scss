@@ -1,0 +1,85 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+@use "../default/screen-size" as size;
+
+.user {
+  width: f.cols(desktop, 3, 2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: f.cols(desktop, 0, 1);
+  padding-right: 1px;
+  &__info {
+    align-self: flex-start;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include m.font-p3;
+    width: 119px;
+    padding-top: 1px;
+  }
+  &__usermane {
+    display: inline;
+  }
+  &__email {
+    display: inline;
+    color: var(--grey-color);
+    @include m.font-source-sans-pro(12, 14);
+    padding-right: 2px;
+  }
+  &__img {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+  }
+  &__sign-out {
+    width: 24px;
+    height: 20px;
+  }
+}
+
+@media (max-width: size.$max-tablet) {
+  .user {
+    margin: 0;
+    padding: 0;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    &__info {
+      align-items: flex-start;
+      width: 100%;
+    }
+    &__username {
+      top: -1px;
+      position: relative;
+      width: unset;
+      @include m.font-source-sans-pro(20, 26);
+    }
+    &__email {
+      width: unset;
+      position: relative;
+      top: 1px;
+      @include m.font-source-sans-pro(13, 20);
+    }
+    &__img {
+      --size: 67px;
+      margin-bottom: 13px;
+    }
+    &__sign-out {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: size.$min-two-k) {
+  .user {
+    padding-right: 0;
+    position: relative;
+    top: 1px;
+    &__img {
+      position: relative;
+      left: -3px;
+    }
+  }
+}

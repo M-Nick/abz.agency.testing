@@ -3,7 +3,7 @@
 @use "../default/screen-size" as size;
 
 .header {
-  z-index: 200;
+  z-index: 50;
   display: flex;
   align-items: center;
   position: fixed;
@@ -21,62 +21,6 @@
       width: 133px;
     }
   }
-  &__links {
-    position: relative;
-    top: -2px;
-    width: f.cols(desktop, 7, 6);
-    padding: 0 35px 0 41.4px;
-  }
-  &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-  }
-  &__item {
-    padding-left: 0.1px;
-  }
-  &__link {
-    @include m.font-p2;
-  }
-  &__user {
-    width: f.cols(desktop, 3, 2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: f.cols(desktop, 0, 1);
-    padding-right: 1px;
-  }
-  &__info {
-    align-self: flex-start;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    @include m.font-p3;
-    width: 119px;
-    padding-top: 1px;
-  }
-  &__usermane {
-    display: inline;
-  }
-  &__email {
-    display: inline;
-    color: var(--grey-color);
-    @include m.font-source-sans-pro(12, 14);
-    padding-right: 2px;
-  }
-  &__img {
-    --size: 40px;
-    width: var(--size);
-    height: var(--size);
-    border-radius: 50%;
-  }
-  &__sign-out {
-    width: 24px;
-    height: 20px;
-  }
   &__menu {
     display: none;
   }
@@ -85,7 +29,7 @@
 @media (max-width: size.$max-tablet) {
   .header {
     justify-content: space-between;
-    &__links {
+    &__nav {
       display: none;
     }
     &__user {
@@ -109,7 +53,7 @@
         margin-left: 2px;
       }
     }
-    &__links {
+    &__nav {
       display: none;
     }
     &__user {
@@ -130,21 +74,6 @@
     &__logo {
       position: relative;
       top: -0px;
-    }
-    &__links {
-      padding-left: 148px;
-      width: 740px;
-      padding-right: 138px;
-      top: -1px;
-    }
-    &__user {
-      padding-right: 0;
-      position: relative;
-      top: 1px;
-    }
-    &__img {
-      position: relative;
-      left: -3px;
     }
   }
 }

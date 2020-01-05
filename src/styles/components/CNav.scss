@@ -1,0 +1,56 @@
+@use "../default/functions" as f;
+@use "../default/mixins" as m;
+@use "../default/screen-size" as size;
+
+.nav {
+  position: relative;
+  top: -2px;
+  width: f.cols(desktop, 7, 6);
+  padding: 0 35px 0 41.4px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__item {
+    padding-left: 0.1px;
+  }
+  &__link {
+    @include m.font-p2;
+  }
+}
+
+@media (max-width: size.$max-tablet) {
+  .nav {
+    padding: 0;
+    width: unset;
+    &__list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      padding: 0;
+      margin-bottom: 21px;
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        position: relative;
+        left: -1px;
+      }
+      &--last {
+        margin-top: 4px;
+      }
+    }
+  }
+}
+
+@media (min-width: size.$min-two-k) {
+  .nav {
+    padding-left: 148px;
+    width: 740px;
+    padding-right: 138px;
+    top: -1px;
+  }
+}

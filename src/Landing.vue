@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <CHeader />
+    <CHeader @menuClick="handleMenuClick" :user="user" />
     <CAssignment />
     <CAboutMe />
     <CRelationships />
@@ -8,11 +8,14 @@
     <CUsers ref="users" />
     <CRegister @registered="resetUsers" @alert="alert" />
     <CFooter />
+    <CMenu ref="menu" :user="user" />
     <CAlert ref="alert" />
   </div>
 </template>
 
 <script>
+import { url } from '@/configs/url.js'
+
 import CHeader from '@/components/CHeader'
 import CAssignment from '@/components/CAssignment'
 import CAboutMe from '@/components/CAboutMe'
@@ -21,6 +24,7 @@ import CRequirements from '@/components/CRequirements'
 import CUsers from '@/components/CUsers'
 import CRegister from '@/components/CRegister'
 import CFooter from '@/components/CFooter'
+import CMenu from '@/components/CMenu'
 import CAlert from '@/components/CAlert'
 
 export default {
@@ -34,12 +38,32 @@ export default {
     CUsers,
     CRegister,
     CFooter,
+    CMenu,
     CAlert,
+  },
+  data() {
+    return {
+      id: 1,
+      user: {},
+    }
   },
   mounted() {
     this.addTooltips()
+    this.getUserRequest()
   },
   methods: {
+    async getUserRequest() {
+      const response = await fetch(url.get.user({ id: this.id }))
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success) {
+          this.user = data.user
+        }
+      }
+    },
+    handleMenuClick() {
+      this.$refs.menu.open()
+    },
     mouseOverMoveHandler(e) {
       const el = e.target
       if (
