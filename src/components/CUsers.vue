@@ -42,12 +42,24 @@ export default {
     }
   },
   mounted() {
+    this.setWindowResizeHandler()
+    this.setPerPage()
     this.getUsersRequest()
   },
   methods: {
+    setWindowResizeHandler() {
+      window.addEventListener('resize', this.setPerPage)
+    },
+    setPerPage() {
+      if (window.innerWidth < 768) {
+        this.perPage = 3
+      } else {
+        this.perPage = 6
+      }
+    },
     async getUsersRequest() {
       const response = await fetch(
-        url.get.users({ page: this.currentPage++, count: 6 })
+        url.get.users({ page: this.currentPage++, count: this.perPage })
       )
       if (response.ok) {
         const data = await response.json()
