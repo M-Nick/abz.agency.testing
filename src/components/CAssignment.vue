@@ -18,10 +18,7 @@
         luck!</span
       >
     </p>
-    <a
-      @mousedown="handleLinkMousedown"
-      href="#register"
-      class="button button--primary assignment__sign-up"
+    <a href="#register" class="button button--primary assignment__sign-up"
       >Sign Up</a
     >
   </section>
