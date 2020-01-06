@@ -1,19 +1,14 @@
 <template>
   <div id="app">
-    <CHeader
-      @goTo="goTo"
-      ref="header"
-      @menuClick="handleMenuClick"
-      :user="user"
-    />
+    <CHeader ref="header" @menuClick="handleMenuClick" :user="user" />
     <CAssignment ref="assigment" />
     <CAboutMe ref="about" />
     <CRelationships ref="relationships" />
     <CRequirements ref="requirements" />
     <CUsers ref="users" />
     <CRegister ref="register" @registered="resetUsers" @alert="alert" />
-    <CFooter @goTo="goTo" />
-    <CMenu @goTo="goTo" ref="menu" :user="user" />
+    <CFooter />
+    <CMenu ref="menu" :user="user" />
     <CAlert ref="alert" />
   </div>
 </template>
