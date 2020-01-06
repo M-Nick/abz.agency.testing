@@ -7,7 +7,7 @@
       <div v-if="opened" class="cmenu__body">
         <CFirstUser :user="user" class="cmenu__user" />
         <hr class="cmenu__line" />
-        <CNav class="cmenu__nav" />
+        <CNav @goTo="goTo" class="cmenu__nav" />
       </div>
     </transition>
   </div>
@@ -40,6 +40,9 @@ export default {
     },
     close() {
       this.opened = false
+    },
+    goTo(name) {
+      this.$emit('goTo', name)
     },
   },
 }

@@ -3,7 +3,7 @@
 @use "../general/screen-size" as size;
 
 .about {
-  padding: 134px var(--padding-side) 100px var(--padding-side);
+  padding: 0 var(--padding-side) 100px var(--padding-side);
   &__header {
     @include m.font-h2(desktop);
     text-align: center;
@@ -37,7 +37,7 @@
 
 @media (max-width: size.$max-tablet) {
   .about {
-    padding: 113px var(--padding-side) 100px var(--padding-side);
+    padding: 0 var(--padding-side) 100px var(--padding-side);
     &__header {
       @include m.font-h2(tablet);
       margin-bottom: 21px;
@@ -67,7 +67,7 @@
 
 @media (max-width: size.$max-mobile) {
   .about {
-    padding: 68px var(--padding-side) 34px var(--padding-side);
+    padding: 0 var(--padding-side) 34px var(--padding-side);
     &__header {
       @include m.font-h2(mobile);
       margin-bottom: 25px;

@@ -81,7 +81,7 @@ import CInput from '@/components/CInput'
 import CSelect from '@/components/CSelect'
 import CFile from '@/components/CFile'
 
-import { url } from '@/configs/url.js'
+import { url } from '@/js/url.js'
 
 export default {
   name: 'CRegister',

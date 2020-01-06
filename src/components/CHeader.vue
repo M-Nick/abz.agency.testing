@@ -35,7 +35,7 @@
         />
       </svg>
     </a>
-    <CNav class="header__nav" />
+    <CNav @goTo="goTo" class="header__nav" />
     <CFirstUser :user="user" class="header__user" />
     <button class="header__menu icon" @click="handleMenuClick">
       <svg viewBox="0 0 23 22">
@@ -70,6 +70,9 @@ export default {
   methods: {
     handleMenuClick() {
       this.$emit('menuClick')
+    },
+    goTo(name) {
+      this.$emit('goTo', name)
     },
   },
 }

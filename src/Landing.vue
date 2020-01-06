@@ -1,20 +1,25 @@
 <template>
   <div id="app">
-    <CHeader @menuClick="handleMenuClick" :user="user" />
-    <CAssignment />
-    <CAboutMe />
-    <CRelationships />
-    <CRequirements />
+    <CHeader
+      @goTo="goTo"
+      ref="header"
+      @menuClick="handleMenuClick"
+      :user="user"
+    />
+    <CAssignment ref="assigment" />
+    <CAboutMe ref="about" />
+    <CRelationships ref="relationships" />
+    <CRequirements ref="requirements" />
     <CUsers ref="users" />
-    <CRegister @registered="resetUsers" @alert="alert" />
-    <CFooter />
-    <CMenu ref="menu" :user="user" />
+    <CRegister ref="register" @registered="resetUsers" @alert="alert" />
+    <CFooter @goTo="goTo" />
+    <CMenu @goTo="goTo" ref="menu" :user="user" />
     <CAlert ref="alert" />
   </div>
 </template>
 
 <script>
-import { url } from '@/configs/url.js'
+import { url } from '@/js/url.js'
 
 import CHeader from '@/components/CHeader'
 import CAssignment from '@/components/CAssignment'
@@ -45,13 +50,28 @@ export default {
     return {
       id: 1,
       user: {},
+      startTime: 0,
     }
   },
   mounted() {
+    this.goTo()
     this.addTooltips()
     this.getUserRequest()
   },
   methods: {
+    goTo(name) {
+      name = name ? name : window.location.pathname.replace('/', '')
+      const anchor = this.$refs[name]
+      if (anchor) {
+        this.setUrl(name)
+        const targetPos = anchor.$el.offsetTop - 64
+        document.scrollingElement.scrollTop = targetPos
+      }
+    },
+    setUrl(name) {
+      const url = window.location.origin + '/' + name
+      window.history.pushState(null, name, url)
+    },
     async getUserRequest() {
       const response = await fetch(url.get.user({ id: this.id }))
       if (response.ok) {

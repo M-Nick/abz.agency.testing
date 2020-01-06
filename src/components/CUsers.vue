@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { url } from '@/configs/url.js'
+import { url } from '@/js/url.js'
 
 import User from '@/components/CUser'
 

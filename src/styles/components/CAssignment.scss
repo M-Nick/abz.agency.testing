@@ -9,6 +9,7 @@
   position: relative;
   width: var(--max-width);
   height: 725px;
+  margin-bottom: 134px;
   &__bg {
     z-index: -1;
     position: absolute;
@@ -47,6 +48,7 @@
   .assignment {
     --padding-vertical: 114px;
     height: 623px;
+    margin-bottom: 113px;
     &__bg {
       background-size: 974px 650px;
     }
@@ -66,6 +68,7 @@
   .assignment {
     --padding-vertical: 67px;
     height: 393px;
+    margin-bottom: 68px;
     &__bg {
       background-size: 650px 434px;
       background-position: -127px -9px;
