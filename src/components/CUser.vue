@@ -7,7 +7,7 @@
       class="user__avatar"
     />
     <div v-else class="user__avatar user__avatar--default"></div>
-    <div class="user__info">
+    <div class="user__info" :class="infoClass()">
       <h4 ref="name" class="user__name">{{ user.name }}</h4>
       <div class="user__position">{{ user.position }}</div>
       <div class="user__email">{{ user.email }}</div>
@@ -35,6 +35,17 @@ export default {
     this.loadPhoto()
   },
   methods: {
+    infoClass() {
+      let result = ''
+      result += ['name', 'position', 'email', 'phone'].reduce(
+        (acc, cur) =>
+          acc || Object.prototype.hasOwnProperty.call(this.user, cur),
+        false
+      )
+        ? ''
+        : ' user__info--empty'
+      return result
+    },
     setOverflowVerticalClass() {
       const nameEl = this.$refs.name
       if (
@@ -45,16 +56,23 @@ export default {
       }
     },
     loadPhoto() {
-      const img = document.createElement('img')
-      img.src = this.user.photo
-      img.onload = this.setPhoto
-      img.onerror = this.setNoPhoto
+      if (this.user.photo !== undefined) {
+        const img = document.createElement('img')
+        img.src = this.user.photo
+        img.onload = this.setPhoto
+        img.onerror = this.setNoPhoto
+      }
     },
     setPhoto() {
       this.photoSrc = this.user.photo
     },
     setNoPhoto() {
       this.photoSrc = require('@/assets/no-user.png')
+    },
+  },
+  watch: {
+    user() {
+      this.loadPhoto()
     },
   },
 }

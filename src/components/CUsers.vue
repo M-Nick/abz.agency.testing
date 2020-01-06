@@ -8,7 +8,7 @@
     </p>
     <div class="users__group" ref="users">
       <User
-        v-for="(user, index) in users"
+        v-for="(user, index) in usersOrEmpty"
         :key="index"
         :user="user"
         class="users__user"
@@ -19,7 +19,14 @@
       @click="getUsersRequest()"
       class="button button--secondary users__button"
     >
-      Show more
+      <span v-if="!loading">Show more</span>
+      <div v-else class="users__loaders">
+        <div class="users__loader"></div>
+        <div class="users__loader"></div>
+        <div class="users__loader"></div>
+        <div class="users__loader"></div>
+        <div class="users__loader"></div>
+      </div>
     </button>
   </section>
 </template>
@@ -40,7 +47,17 @@ export default {
       perPage: 6,
       users: [],
       showButton: true,
+      loading: false,
     }
+  },
+  computed: {
+    usersOrEmpty() {
+      if (this.users.length > 0) {
+        return this.users
+      } else {
+        return new Array(this.perPage).fill({})
+      }
+    },
   },
   mounted() {
     this.setWindowResizeHandler()
@@ -59,6 +76,7 @@ export default {
       }
     },
     async getUsersRequest() {
+      this.loading = true
       const response = await fetch(
         url.get.users({ page: this.currentPage++, count: this.perPage })
       )
@@ -69,6 +87,7 @@ export default {
           this.users.push(...data.users)
         }
       }
+      this.loading = false
     },
     reset() {
       this.currentPage = 1

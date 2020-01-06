@@ -52,6 +52,9 @@
   &__assistive {
     @include m.font-source-sans-pro(12, 16);
     white-space: nowrap;
+    width: calc(100% - 16px);
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--color);
     position: absolute;
     left: 17px;

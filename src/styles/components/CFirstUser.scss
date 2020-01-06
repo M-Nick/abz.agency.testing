@@ -18,21 +18,46 @@
     @include m.font-p3;
     width: 119px;
     padding-top: 1px;
+    --bgc: transparent;
+    &--empty {
+      --bgc: var(--loading-color);
+      .user__username {
+        margin-bottom: 2px;
+      }
+    }
   }
-  &__usermane {
-    display: inline;
+  &__username {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 1.2em;
+    width: 100%;
+    text-align: right;
+    background-color: var(--bgc);
+    &--overflow-vertical {
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+    }
   }
   &__email {
-    display: inline;
+    text-align: right;
+    min-height: 1.2em;
+    width: 100%;
     color: var(--grey-color);
+    background-color: var(--bgc);
     @include m.font-source-sans-pro(12, 14);
     padding-right: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__img {
     --size: 40px;
     width: var(--size);
     height: var(--size);
     border-radius: 50%;
+    &--default {
+      background-color: var(--loading-color);
+    }
   }
   &__sign-out {
     width: 24px;

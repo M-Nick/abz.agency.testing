@@ -1,10 +1,11 @@
 <template>
   <div class="user">
-    <div class="user__info">
-      <div class="user__username">{{ user.name }}</div>
+    <div class="user__info" :class="infoClass()">
+      <div ref="name" class="user__username">{{ user.name }}</div>
       <div class="user__email">{{ user.email }}</div>
     </div>
-    <img :src="user.photo" :alt="user.name" class="user__img" />
+    <img v-if="photoSrc" :src="photoSrc" :alt="user.name" class="user__img" />
+    <div v-else class="user__img user__img--default"></div>
     <a class="icon user__sign-out" href="#">
       <svg viewBox="0 0 24 20">
         <g stroke-width="1">
@@ -31,8 +32,57 @@ export default {
       default: () => ({}),
     },
   },
-  mounted() {},
-  methods: {},
+  data() {
+    return {
+      photoSrc: '',
+    }
+  },
+  async mounted() {
+    this.loadPhoto()
+    this.setOverflowVerticalClass()
+  },
+  methods: {
+    infoClass() {
+      let result = ''
+      result += ['name', 'email'].reduce(
+        (acc, cur) =>
+          acc || Object.prototype.hasOwnProperty.call(this.user, cur),
+        false
+      )
+        ? ''
+        : ' user__info--empty'
+      console.log(result)
+      return result
+    },
+    setOverflowVerticalClass() {
+      const nameEl = this.$refs.name
+      if (
+        nameEl.offsetHeight < nameEl.scrollHeight &&
+        nameEl.offsetWidth <= nameEl.scrollWidth
+      ) {
+        nameEl.classList.add('user__username--overflow-vertical')
+      }
+    },
+    loadPhoto() {
+      if (this.user.photo !== undefined) {
+        const img = document.createElement('img')
+        img.src = this.user.photo
+        img.onload = this.setPhoto
+        img.onerror = this.setNoPhoto
+      }
+    },
+    setPhoto() {
+      this.photoSrc = this.user.photo
+    },
+    setNoPhoto() {
+      this.photoSrc = require('@/assets/no-user.png')
+    },
+  },
+  watch: {
+    user() {
+      this.loadPhoto()
+    },
+  },
 }
 </script>
 
