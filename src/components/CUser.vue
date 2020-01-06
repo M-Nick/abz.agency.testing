@@ -8,7 +8,7 @@
     />
     <div v-else class="user__avatar user__avatar--default"></div>
     <div class="user__info">
-      <div ref="name" class="user__name">{{ user.name }}</div>
+      <h4 ref="name" class="user__name">{{ user.name }}</h4>
       <div class="user__position">{{ user.position }}</div>
       <div class="user__email">{{ user.email }}</div>
       <div class="user__phone">{{ user.phone }}</div>

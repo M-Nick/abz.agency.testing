@@ -17,7 +17,7 @@
           :class="skill.class"
         />
         <div class="relates__info">
-          <div class="relates__title" v-html="skill.title"></div>
+          <h3 class="relates__title" v-html="skill.title"></h3>
           <div class="relates__text" v-html="skill.text"></div>
         </div>
       </article>
