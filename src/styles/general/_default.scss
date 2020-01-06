@@ -1,6 +1,6 @@
 @use "mixins" as m;
 @use "functions" as f;
-@use "../default/screen-size" as size;
+@use "../general/screen-size" as size;
 
 .link {
   text-decoration: none;

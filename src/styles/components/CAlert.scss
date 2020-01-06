@@ -1,6 +1,6 @@
-@use "../default/functions" as f;
-@use "../default/mixins" as m;
-@use "../default/screen-size" as size;
+@use "../general/functions" as f;
+@use "../general/mixins" as m;
+@use "../general/screen-size" as size;
 
 .alert {
   position: fixed;

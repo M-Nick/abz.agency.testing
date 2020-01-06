@@ -1,13 +1,13 @@
 <template>
-  <div class="menu">
+  <div class="cmenu">
     <transition name="animation-bg">
-      <div v-if="opened" @click="close" class="menu__bg"></div>
+      <div v-if="opened" @click="close" class="cmenu__bg"></div>
     </transition>
     <transition name="animation-body">
-      <div v-if="opened" class="menu__body">
-        <CFirstUser :user="user" class="menu__user" />
-        <hr class="menu__line" />
-        <CNav class="menu__nav" />
+      <div v-if="opened" class="cmenu__body">
+        <CFirstUser :user="user" class="cmenu__user" />
+        <hr class="cmenu__line" />
+        <CNav class="cmenu__nav" />
       </div>
     </transition>
   </div>
@@ -31,7 +31,7 @@ export default {
   },
   data() {
     return {
-      opened: true,
+      opened: false,
     }
   },
   methods: {

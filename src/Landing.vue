@@ -91,9 +91,9 @@ export default {
 </script>
 
 <style lang="scss">
-@use "styles/default/default";
-@use "./styles/default/global-vars";
-@import url("./styles/default/fonts.css");
+@use "styles/general/default";
+@use "./styles/general/global-vars";
+@import url("./styles/general/fonts.css");
 
 *,
 *::before,
