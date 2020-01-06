@@ -114,6 +114,17 @@ input {
 ul {
   list-style: none;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 #app {
   position: relative;
   margin: auto;

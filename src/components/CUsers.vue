@@ -1,20 +1,17 @@
 <template>
   <section class="users">
-    <h1 class="users__header">Our cheerful users</h1>
+    <h2 class="users__header">Our cheerful users</h2>
     <p class="users__title">
       Attention! Sorting users <br class="mobile" />
       by registration date
     </p>
-    <div class="users__group">
-      <article v-for="(user, index) in users" :key="index" class="users__user">
-        <img :src="user.photo" :alt="user.name" class="users__avatar" />
-        <div class="users__info">
-          <div class="users__name">{{ user.name }}</div>
-          <div class="users__position">{{ user.position }}</div>
-          <div class="users__email">{{ user.email }}</div>
-          <div class="users__phone">{{ user.phone }}</div>
-        </div>
-      </article>
+    <div class="users__group" ref="users">
+      <User
+        v-for="(user, index) in users"
+        :key="index"
+        :user="user"
+        class="users__user"
+      ></User>
     </div>
     <button
       v-if="showButton"
@@ -29,8 +26,13 @@
 <script>
 import { url } from '@/configs/url.js'
 
+import User from '@/components/CUser'
+
 export default {
   name: 'CUsers',
+  components: {
+    User,
+  },
   data() {
     return {
       currentPage: 1,

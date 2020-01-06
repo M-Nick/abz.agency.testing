@@ -1,6 +1,6 @@
 <template>
   <section class="about">
-    <h1 class="about__header">Let's get acquainted</h1>
+    <h2 class="about__header">Let's get acquainted</h2>
     <div class="about__body">
       <img src="@/assets/man-mobile.svg" alt="" class="about__img" />
       <div class="about__info">

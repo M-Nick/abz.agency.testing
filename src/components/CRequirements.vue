@@ -1,7 +1,7 @@
 <template>
   <section class="reqs">
     <div class="reqs__bg"></div>
-    <h1 class="reqs__header">General requirements for the test task</h1>
+    <h2 class="reqs__header">General requirements for the test task</h2>
     <div class="reqs__body">
       <div class="reqs__info">
         <p class="reqs__p">
