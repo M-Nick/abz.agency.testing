@@ -54,24 +54,10 @@ export default {
     }
   },
   mounted() {
-    this.goTo()
     this.addTooltips()
     this.getUserRequest()
   },
   methods: {
-    goTo(name) {
-      name = name ? name : window.location.pathname.replace('/', '')
-      const anchor = this.$refs[name]
-      if (anchor) {
-        this.setUrl(name)
-        const targetPos = anchor.$el.offsetTop - 64
-        document.scrollingElement.scrollTop = targetPos
-      }
-    },
-    setUrl(name) {
-      const url = window.location.origin + '/' + name
-      window.history.pushState(null, name, url)
-    },
     async getUserRequest() {
       const response = await fetch(url.get.user({ id: this.id }))
       if (response.ok) {

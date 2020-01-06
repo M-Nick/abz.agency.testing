@@ -1,5 +1,6 @@
 <template>
   <section class="about">
+    <div class="anchor" id="about"></div>
     <h2 class="about__header">Let's get acquainted</h2>
     <div class="about__body">
       <img src="@/assets/man-mobile.svg" alt="" class="about__img" />
@@ -16,7 +17,7 @@
           Last week, Google Search and Ads teams announced two new speed
           initiatives to help improve user-experience on the web.
         </p>
-        <a href="register" class="link-bold about__link">Sign Up</a>
+        <a href="#register" class="link-bold about__link">Sign Up</a>
       </div>
     </div>
   </section>

@@ -1,5 +1,6 @@
 <template>
   <section class="users">
+    <div class="anchor" id="users"></div>
     <h2 class="users__header">Our cheerful users</h2>
     <p class="users__title">
       Attention! Sorting users <br class="mobile" />

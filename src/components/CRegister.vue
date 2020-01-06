@@ -1,5 +1,6 @@
 <template>
   <section class="register">
+    <div class="anchor" id="register"></div>
     <h2 class="register__header">Register to get a work</h2>
     <div class="register__title">
       Attention! After successful registration and alert, update the list of

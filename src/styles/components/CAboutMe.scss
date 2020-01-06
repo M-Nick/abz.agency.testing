@@ -3,6 +3,7 @@
 @use "../general/screen-size" as size;
 
 .about {
+  position: relative;
   padding: 0 var(--padding-side) 100px var(--padding-side);
   &__header {
     @include m.font-h2(desktop);

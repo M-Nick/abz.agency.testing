@@ -1,5 +1,6 @@
 <template>
   <section class="assignment">
+    <div class="anchor" id="assignment"></div>
     <div class="assignment__bg"></div>
     <h1 class="assignment__title">
       Test assignment for Frontend Developer position
@@ -19,7 +20,7 @@
     </p>
     <a
       @mousedown="handleLinkMousedown"
-      href="register"
+      href="#register"
       class="button button--primary assignment__sign-up"
       >Sign Up</a
     >

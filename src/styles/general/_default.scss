@@ -122,6 +122,12 @@
   overflow: hidden;
 }
 
+.anchor {
+  position: absolute;
+  top: calc(var(--header-h) * (-1));
+  left: 0;
+}
+
 .tablet {
   display: none;
 }

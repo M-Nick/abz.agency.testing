@@ -38,23 +38,23 @@
       </a>
       <ul class="footer__menu">
         <li class="footer__item">
-          <a href="about" class="link-on-dark footer__link">About me</a>
+          <a href="#about" class="link-on-dark footer__link">About me</a>
         </li>
         <li class="footer__item">
-          <a href="relationships" class="link-on-dark footer__link"
+          <a href="#relationships" class="link-on-dark footer__link"
             >Relationships</a
           >
         </li>
         <li class="footer__item">
-          <a href="requirements" class="link-on-dark footer__link"
+          <a href="#requirements" class="link-on-dark footer__link"
             >Requirements</a
           >
         </li>
         <li class="footer__item">
-          <a href="users" class="link-on-dark footer__link">Users</a>
+          <a href="#users" class="link-on-dark footer__link">Users</a>
         </li>
         <li class="footer__item">
-          <a href="register" class="link-on-dark footer__link">Sign Up</a>
+          <a href="#register" class="link-on-dark footer__link">Sign Up</a>
         </li>
       </ul>
     </div>

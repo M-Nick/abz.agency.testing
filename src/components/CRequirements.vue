@@ -1,5 +1,6 @@
 <template>
   <section class="reqs">
+    <div class="anchor" id="requirements"></div>
     <div class="reqs__bg"></div>
     <h2 class="reqs__header">General requirements for the test task</h2>
     <div class="reqs__body">

@@ -1,5 +1,6 @@
 <template>
   <section class="relates">
+    <div class="anchor" id="relationships"></div>
     <div class="relates__header">
       About my relationships with web-development
     </div>

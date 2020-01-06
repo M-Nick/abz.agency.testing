@@ -2,14 +2,14 @@
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <a @mousedown="handleLinkMousedown" href="about" class="menu nav__link"
+        <a @mousedown="handleLinkMousedown" href="#about" class="menu nav__link"
           >About me</a
         >
       </li>
       <li class="nav__item">
         <a
           @mousedown="handleLinkMousedown"
-          href="relationships"
+          href="#relationships"
           class="menu nav__link"
           >Relationships</a
         >
@@ -17,20 +17,20 @@
       <li class="nav__item">
         <a
           @mousedown="handleLinkMousedown"
-          href="requirements"
+          href="#requirements"
           class="menu nav__link"
           >Requirements</a
         >
       </li>
       <li class="nav__item">
-        <a @mousedown="handleLinkMousedown" href="users" class="menu nav__link"
+        <a @mousedown="handleLinkMousedown" href="#users" class="menu nav__link"
           >Users</a
         >
       </li>
       <li class="nav__item">
         <a
           @mousedown="handleLinkMousedown"
-          href="register"
+          href="#register"
           class="menu nav__link"
           >Sign Up</a
         >

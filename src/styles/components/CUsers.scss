@@ -3,6 +3,7 @@
 @use "../general/screen-size" as size;
 
 .users {
+  position: relative;
   padding: 0 var(--padding-side);
   margin-bottom: 154px;
   &__header {
