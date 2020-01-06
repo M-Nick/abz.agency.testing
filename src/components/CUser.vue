@@ -31,8 +31,8 @@ export default {
     }
   },
   async mounted() {
+    await this.loadPhoto()
     this.setOverflowVerticalClass()
-    this.loadPhoto()
   },
   methods: {
     infoClass() {
@@ -66,13 +66,14 @@ export default {
     setPhoto() {
       this.photoSrc = this.user.photo
     },
-    setNoPhoto() {
+    setNoPhoto(e) {
       this.photoSrc = require('@/assets/no-user.png')
     },
   },
   watch: {
     user() {
       this.loadPhoto()
+      this.setOverflowVerticalClass()
     },
   },
 }

@@ -51,7 +51,6 @@ export default {
       )
         ? ''
         : ' user__info--empty'
-      console.log(result)
       return result
     },
     setOverflowVerticalClass() {

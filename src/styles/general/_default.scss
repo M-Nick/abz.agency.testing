@@ -126,6 +126,9 @@
   position: absolute;
   top: calc(var(--header-h) * (-1));
   left: 0;
+  &--no-top {
+    top: 0;
+  }
 }
 
 .tablet {

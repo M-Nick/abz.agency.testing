@@ -27,6 +27,18 @@
     --bgc: transparent;
     &--empty {
       --bgc: var(--loading-color);
+      .user__name {
+        width: 80%;
+      }
+      .user__position {
+        width: 40%;
+      }
+      .user__email {
+        width: 100%;
+      }
+      .user__phone {
+        width: 60%;
+      }
     }
   }
   &__name {
@@ -40,6 +52,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     background-color: var(--bgc);
+    border-radius: 2px;
     &--overflow-vertical {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
@@ -52,6 +65,7 @@
     @include m.font-source-sans-pro(14, 17);
     margin-bottom: 2px;
     min-height: 1.2em;
+    border-radius: 2px;
   }
   &__email {
     background-color: var(--bgc);
@@ -63,12 +77,14 @@
     text-overflow: ellipsis;
     margin-bottom: 2px;
     min-height: 1.2em;
+    border-radius: 2px;
   }
   &__phone {
     background-color: var(--bgc);
     color: var(--grey-text);
     @include m.font-source-sans-pro(14, 17);
     min-height: 1.2em;
+    border-radius: 2px;
   }
 }
 
@@ -112,6 +128,11 @@
     width: f.cols(mobile, 4, 6);
     margin-right: 0;
     margin-bottom: 23px;
+    &__info {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
     &__name {
       margin-bottom: 4px;
     }

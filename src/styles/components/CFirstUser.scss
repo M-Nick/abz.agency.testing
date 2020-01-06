@@ -23,6 +23,7 @@
       --bgc: var(--loading-color);
       .user__username {
         margin-bottom: 2px;
+        width: 60%;
       }
     }
   }
@@ -33,6 +34,7 @@
     width: 100%;
     text-align: right;
     background-color: var(--bgc);
+    border-radius: 2px;
     &--overflow-vertical {
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
@@ -49,6 +51,7 @@
     padding-right: 2px;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-radius: 2px;
   }
   &__img {
     --size: 40px;

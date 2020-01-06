@@ -43,7 +43,6 @@ export default {
   },
   data() {
     return {
-      currentPage: 1,
       perPage: 6,
       users: [],
       showButton: true,
@@ -51,6 +50,9 @@ export default {
     }
   },
   computed: {
+    page() {
+      return Math.ceil(this.users.length / this.perPage + 1)
+    },
     usersOrEmpty() {
       if (this.users.length > 0) {
         return this.users
@@ -62,7 +64,6 @@ export default {
   mounted() {
     this.setWindowResizeHandler()
     this.setPerPage()
-    this.getUsersRequest()
   },
   methods: {
     setWindowResizeHandler() {
@@ -74,23 +75,36 @@ export default {
       } else {
         this.perPage = 6
       }
+      this.getMoreUsersIfNeed()
     },
-    async getUsersRequest() {
+    getMoreUsersIfNeed() {
+      if (this.users.length < this.perPage && !this.loading) {
+        this.getUsersRequest(this.perPage - this.users.length)
+      }
+    },
+    async getUsersRequest(count) {
+      if (this.loading) {
+        return
+      }
       this.loading = true
       const response = await fetch(
-        url.get.users({ page: this.currentPage++, count: this.perPage })
+        url.get.users({
+          page: this.page,
+          count: count || this.perPage,
+        })
       )
       if (response.ok) {
         const data = await response.json()
         if (data.success) {
           this.showButton = data.links.next_url !== null
-          this.users.push(...data.users)
+          await this.users.push(...data.users)
         }
+      } else {
+        this.showButton = false
       }
       this.loading = false
     },
     reset() {
-      this.currentPage = 1
       this.perPage = 6
       this.users = []
       this.showButton = true
