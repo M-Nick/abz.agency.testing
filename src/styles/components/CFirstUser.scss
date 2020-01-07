@@ -28,18 +28,11 @@
     }
   }
   &__username {
-    overflow: hidden;
-    text-overflow: ellipsis;
     height: 1.2em;
     width: 100%;
     text-align: right;
     background-color: var(--bgc);
     border-radius: 2px;
-    &--overflow-vertical {
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-    }
   }
   &__email {
     text-align: right;

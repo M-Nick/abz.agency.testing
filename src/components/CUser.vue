@@ -8,7 +8,7 @@
     />
     <div v-else class="user__avatar user__avatar--default"></div>
     <div class="user__info" :class="infoClass()">
-      <h4 ref="name" class="user__name">{{ user.name }}</h4>
+      <h4 v-line-clamp:20="2" ref="name" class="user__name">{{ user.name }}</h4>
       <div class="user__position">{{ user.position }}</div>
       <div class="user__email">{{ user.email }}</div>
       <div class="user__phone">{{ user.phone }}</div>
@@ -32,7 +32,7 @@ export default {
   },
   async mounted() {
     await this.loadPhoto()
-    this.setOverflowVerticalClass()
+    // this.setOverflowVerticalClass()
   },
   methods: {
     infoClass() {
@@ -66,14 +66,14 @@ export default {
     setPhoto() {
       this.photoSrc = this.user.photo
     },
-    setNoPhoto(e) {
+    setNoPhoto() {
       this.photoSrc = require('@/assets/no-user.png')
     },
   },
   watch: {
     user() {
       this.loadPhoto()
-      this.setOverflowVerticalClass()
+      // this.setOverflowVerticalClass()
     },
   },
 }

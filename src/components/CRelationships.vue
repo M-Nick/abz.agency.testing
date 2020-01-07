@@ -1,9 +1,9 @@
 <template>
   <section class="relates">
     <div class="anchor" id="relationships"></div>
-    <div class="relates__header">
+    <h2 class="relates__header">
       About my relationships with web-development
-    </div>
+    </h2>
     <div class="relates__body">
       <article
         v-for="(skill, index) in skills"

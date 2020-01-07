@@ -1,7 +1,9 @@
 <template>
   <div class="user">
     <div class="user__info" :class="infoClass()">
-      <div ref="name" class="user__username">{{ user.name }}</div>
+      <div v-line-clamp:20="1" class="user__username">
+        {{ user.name }}
+      </div>
       <div class="user__email">{{ user.email }}</div>
     </div>
     <img v-if="photoSrc" :src="photoSrc" :alt="user.name" class="user__img" />
@@ -39,7 +41,6 @@ export default {
   },
   async mounted() {
     this.loadPhoto()
-    this.setOverflowVerticalClass()
   },
   methods: {
     infoClass() {
@@ -52,15 +53,6 @@ export default {
         ? ''
         : ' user__info--empty'
       return result
-    },
-    setOverflowVerticalClass() {
-      const nameEl = this.$refs.name
-      if (
-        nameEl.offsetHeight < nameEl.scrollHeight &&
-        nameEl.offsetWidth <= nameEl.scrollWidth
-      ) {
-        nameEl.classList.add('user__username--overflow-vertical')
-      }
     },
     loadPhoto() {
       if (this.user.photo !== undefined) {
