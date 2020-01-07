@@ -22,7 +22,7 @@
     }
   }
   &__input {
-    @include m.font-p2;
+    @include m.p2;
     color: var(--preblack-color);
     position: relative;
     display: block;
@@ -40,7 +40,7 @@
     }
   }
   &__label {
-    @include m.font-p2;
+    @include m.p2;
     white-space: nowrap;
     color: var(--color);
     position: absolute;
@@ -59,7 +59,7 @@
   }
   &__assistive {
     --left: 18px;
-    @include m.font-source-sans-pro(12, 16);
+    @include m.source-sans-pro(12, 16);
     white-space: nowrap;
     color: var(--color);
     position: absolute;

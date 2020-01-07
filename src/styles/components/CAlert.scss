@@ -30,13 +30,13 @@
   }
   &__title {
     position: relative;
-    @include m.font-h4(desktop);
+    @include m.h4(desktop);
     margin-bottom: 15px;
   }
   &__text {
     position: relative;
     color: var(--option-color);
-    @include m.font-p2;
+    @include m.p2;
     margin-bottom: 35px;
   }
   &__button {

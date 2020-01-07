@@ -34,7 +34,7 @@
     position: relative;
     margin-left: 29.4px;
 
-    @include m.font-p2;
+    @include m.p2;
     color: var(--color-on-dark);
   }
   &__line {
@@ -57,7 +57,7 @@
   }
   &__contact {
     position: relative;
-    @include m.font-source-sans-pro(20, 24);
+    @include m.source-sans-pro(20, 24);
     color: var(--color-on-dark);
     height: 44px;
     display: flex;
@@ -105,7 +105,7 @@
     text-align: right;
   }
   &__link {
-    @include m.font-p2;
+    @include m.p2;
     margin-bottom: 8px;
   }
   &__bottom {
@@ -117,7 +117,7 @@
   &__copyright {
     margin-top: 10px;
     position: relative;
-    @include m.font-source-sans-pro(12.1, 16);
+    @include m.source-sans-pro(12.1, 16);
     color: var(--color-on-dark);
   }
   &__socials {
@@ -144,7 +144,7 @@
       margin-left: 1px;
     }
     &__contact {
-      @include m.font-source-sans-pro(18, 24);
+      @include m.source-sans-pro(18, 24);
       svg {
         display: none;
       }
@@ -204,7 +204,7 @@
     }
     &__contact {
       height: unset;
-      @include m.font-p1;
+      @include m.p1;
       &:first-child {
         left: 1px;
         margin-bottom: 1px;
@@ -229,7 +229,7 @@
     }
     &__copyright {
       text-align: center;
-      @include m.font-source-sans-pro(12, 16);
+      @include m.source-sans-pro(12, 16);
     }
   }
 }

@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    @include m.font-p3;
+    @include m.p3;
     width: 119px;
     padding-top: 1px;
     --bgc: transparent;
@@ -40,7 +40,7 @@
     width: 100%;
     color: var(--accessible-grey-color);
     background-color: var(--bgc);
-    @include m.font-source-sans-pro(12, 14);
+    @include m.source-sans-pro(12, 14);
     padding-right: 2px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -75,13 +75,13 @@
       top: -1px;
       position: relative;
       width: unset;
-      @include m.font-source-sans-pro(20, 26);
+      @include m.source-sans-pro(20, 26);
     }
     &__email {
       width: unset;
       position: relative;
       top: 1px;
-      @include m.font-source-sans-pro(13, 20);
+      @include m.source-sans-pro(13, 20);
     }
     &__img {
       --size: 67px;

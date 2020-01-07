@@ -22,7 +22,7 @@
   }
   &__header {
     position: relative;
-    @include m.font-h2(desktop);
+    @include m.h2(desktop);
     text-align: center;
     margin-bottom: 39px;
     color: var(--color-on-dark);
@@ -38,7 +38,7 @@
     width: 447px;
   }
   &__p {
-    @include m.font-p2;
+    @include m.p2;
     margin-bottom: 22px;
     letter-spacing: 0.00052em;
   }
@@ -65,7 +65,7 @@
     }
     &__header {
       width: 414px;
-      @include m.font-h2(tablet);
+      @include m.h2(tablet);
       left: 50%;
       transform: translateX(-50%);
       margin-bottom: 25px;
@@ -98,7 +98,7 @@
     }
     &__header {
       width: 100%;
-      @include m.font-h2(mobile);
+      @include m.h2(mobile);
       left: 50%;
       transform: translateX(-50%);
       margin-bottom: 11px;

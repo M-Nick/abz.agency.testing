@@ -8,12 +8,12 @@
   margin-bottom: 154px;
   &__header {
     text-align: center;
-    @include m.font-h2(desktop);
+    @include m.h2(desktop);
     margin-bottom: 12.5px;
   }
   &__title {
     text-align: center;
-    @include m.font-pt-sans(18, 20);
+    @include m.pt-sans(18, 20);
     margin-bottom: 59px;
     font-variation-settings: 'wght' 700;
   }
@@ -59,11 +59,11 @@
   .users {
     margin-bottom: 134px;
     &__header {
-      @include m.font-h2(tablet);
+      @include m.h2(tablet);
       margin-bottom: 11px;
     }
     &__title {
-      @include m.font-p1;
+      @include m.p1;
       letter-spacing: 0.002em;
       margin-bottom: 37px;
     }
@@ -74,11 +74,11 @@
   .users {
     margin-bottom: 68px;
     &__header {
-      @include m.font-h2(mobile);
+      @include m.h2(mobile);
       margin-bottom: 12px;
     }
     &__title {
-      @include m.font-p2;
+      @include m.p2;
       margin-bottom: 30px;
     }
   }
@@ -87,7 +87,7 @@
 @media (min-width: size.$min-two-k) {
   .users {
     &__title {
-      @include m.font-p1;
+      @include m.p1;
       margin-bottom: 53px;
     }
     &__user {

@@ -24,13 +24,13 @@
     background-repeat: no-repeat;
   }
   &__title {
-    @include m.font-h1(desktop);
+    @include m.h1(desktop);
     position: relative;
     width: f.cols(desktop, 6, 5);
     color: var(--color-on-dark);
   }
   &__text {
-    @include m.font-source-sans-pro(20.1, 26);
+    @include m.source-sans-pro(20.1, 26);
     color: var(--color-on-dark);
     position: relative;
     left: 2px;
@@ -53,11 +53,11 @@
       background-size: 974px 650px;
     }
     &__title {
-      @include m.font-h1(tablet);
+      @include m.h1(tablet);
       width: f.cols(tablet, 7, 12);
     }
     &__text {
-      @include m.font-source-sans-pro(18, 24);
+      @include m.source-sans-pro(18, 24);
       width: f.cols(tablet, 7, 12);
       margin-bottom: 35px;
     }
@@ -76,11 +76,11 @@
     &__title {
       text-align: center;
       margin-left: 1px;
-      @include m.font-overpass(30, 34);
+      @include m.overpass(30, 34);
       width: f.cols(mobile, 4, 6);
     }
     &__text {
-      @include m.font-p2;
+      @include m.p2;
       width: f.cols(mobile, 4, 6);
       margin-bottom: 38px;
       margin-top: 10px;

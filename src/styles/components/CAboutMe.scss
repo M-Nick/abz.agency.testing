@@ -6,7 +6,7 @@
   position: relative;
   padding: 0 var(--padding-side) 100px var(--padding-side);
   &__header {
-    @include m.font-h2(desktop);
+    @include m.h2(desktop);
     text-align: center;
     margin-bottom: 23px;
   }
@@ -24,11 +24,11 @@
     padding-top: 20px;
   }
   &__title {
-    @include m.font-h3(desktop);
+    @include m.h3(desktop);
     margin-bottom: 6px;
   }
   &__text {
-    @include m.font-p2;
+    @include m.p2;
     color: var(--grey-text);
     width: 612px;
     margin-left: 2px;
@@ -40,7 +40,7 @@
   .about {
     padding: 0 var(--padding-side) 100px var(--padding-side);
     &__header {
-      @include m.font-h2(tablet);
+      @include m.h2(tablet);
       margin-bottom: 21px;
     }
     &__img {
@@ -53,11 +53,11 @@
     }
     &__title {
       margin-left: 1.3px;
-      @include m.font-h3(tablet);
+      @include m.h3(tablet);
       margin-bottom: 11px;
     }
     &__text {
-      @include m.font-p2;
+      @include m.p2;
       width: 100%;
     }
     &__link {
@@ -70,7 +70,7 @@
   .about {
     padding: 0 var(--padding-side) 34px var(--padding-side);
     &__header {
-      @include m.font-h2(mobile);
+      @include m.h2(mobile);
       margin-bottom: 25px;
     }
     &__body {
@@ -89,7 +89,7 @@
       position: relative;
     }
     &__title {
-      @include m.font-h3(mobile);
+      @include m.h3(mobile);
       width: f.cols(mobile, 2, 6);
       position: relative;
       left: calc(50% - 1px);
@@ -97,7 +97,7 @@
       text-align: center;
     }
     &__text {
-      @include m.font-p2;
+      @include m.p2;
       text-align: center;
       margin-left: 1px;
       &:last-of-type {

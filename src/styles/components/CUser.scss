@@ -42,7 +42,7 @@
     }
   }
   &__name {
-    @include m.font-h4(desktop);
+    @include m.h4(desktop);
     margin-bottom: 8px;
     margin-left: -1px;
     margin-top: 1px;
@@ -52,7 +52,7 @@
   &__position {
     background-color: var(--bgc);
     color: var(--grey-text);
-    @include m.font-source-sans-pro(14, 17);
+    @include m.source-sans-pro(14, 17);
     margin-bottom: 2px;
     min-height: 1.2em;
     border-radius: 2px;
@@ -60,7 +60,7 @@
   &__email {
     background-color: var(--bgc);
     color: var(--grey-text);
-    @include m.font-source-sans-pro(14, 17);
+    @include m.source-sans-pro(14, 17);
     white-space: nowrap;
     width: 100%;
     overflow: hidden;
@@ -72,7 +72,7 @@
   &__phone {
     background-color: var(--bgc);
     color: var(--grey-text);
-    @include m.font-source-sans-pro(14, 17);
+    @include m.source-sans-pro(14, 17);
     min-height: 1.2em;
     border-radius: 2px;
   }
@@ -98,17 +98,17 @@
     &__position {
       margin-bottom: 0px;
       text-align: center;
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
     }
     &__email {
       margin-bottom: 0px;
       text-align: center;
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
     }
     &__phone {
       margin-bottom: 6px;
       text-align: center;
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
     }
   }
 }
@@ -127,15 +127,15 @@
       margin-bottom: 4px;
     }
     &__position {
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
       margin-bottom: 2px;
     }
     &__email {
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
       margin-bottom: 2px;
     }
     &__phone {
-      @include m.font-source-sans-pro(14, 17);
+      @include m.source-sans-pro(14, 17);
     }
   }
 }

@@ -27,7 +27,7 @@
     }
   }
   &-bold {
-    @include m.font-source-sans-pro(22, 22);
+    @include m.source-sans-pro(22, 22);
     text-decoration: none;
     font-weight: 700;
     color: var(--prim-color);
@@ -76,7 +76,7 @@
 }
 
 .button {
-  @include m.font-source-sans-pro(20, 18);
+  @include m.source-sans-pro(20, 18);
   font-weight: 700;
   display: flex;
   justify-content: center;
