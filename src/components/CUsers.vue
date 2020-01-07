@@ -15,6 +15,7 @@
       ></User>
     </div>
     <button
+      aria-label="Show more"
       v-if="showButton"
       @click="getUsersRequest()"
       class="button button--secondary users__button"

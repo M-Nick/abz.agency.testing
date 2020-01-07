@@ -1,10 +1,12 @@
 <template>
   <div class="select">
+    <label for="select" class="visually-hidden"></label>
     <select
       tabindex="-1"
       :name="name"
       :value="currentOption.id"
       class="visually-hidden"
+      id="select"
       required
     >
       <option

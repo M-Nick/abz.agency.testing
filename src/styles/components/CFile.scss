@@ -7,7 +7,7 @@
   position: relative;
   cursor: pointer;
   outline: none;
-  --color: var(--grey-color);
+  --color: var(--accessible-grey-color);
   &--error {
     --color: var(--error-color);
     .file__name {

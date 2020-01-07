@@ -4,7 +4,11 @@
     <div class="alert__modal">
       <div class="alert__title">{{ title }}</div>
       <div class="alert__text">{{ text }}</div>
-      <button @click="close()" class="alert__button link-bold">
+      <button
+        :aria-label="button"
+        @click="close()"
+        class="alert__button link-bold"
+      >
         {{ button }}
       </button>
     </div>

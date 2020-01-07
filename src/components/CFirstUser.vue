@@ -8,7 +8,7 @@
     </div>
     <img v-if="photoSrc" :src="photoSrc" :alt="user.name" class="user__img" />
     <div v-else class="user__img user__img--default"></div>
-    <a class="icon user__sign-out" href="#">
+    <a class="icon user__sign-out" href="#" aria-label="Sign out">
       <svg viewBox="0 0 24 20">
         <g stroke-width="1">
           <g transform="translate(-1.000000, 0.000000)" fill="currentColor">

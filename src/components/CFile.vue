@@ -16,9 +16,17 @@
       type="file"
       class="visually-hidden"
       :name="name"
+      id="file"
       required
     />
-    <div class="file__name" :class="nameClass()">{{ text }}</div>
+    <label
+      v-line-clamp:20="1"
+      class="file__name"
+      :class="nameClass()"
+      for="file"
+    >
+      {{ text }}
+    </label>
     <div class="file__button button button--secondary">
       <span class="tablet desktop two-k">
         Upload
