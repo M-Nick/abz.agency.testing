@@ -204,9 +204,10 @@ export default {
         },
       })
       if (response.ok) {
+        const data = await response.json()
         this.$emit('alert', {
           title: 'Congratulations',
-          text: 'You have successfully passed the registration',
+          text: data.message,
           button: 'ok',
         })
         return true
