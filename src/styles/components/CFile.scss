@@ -69,7 +69,7 @@
 @media (max-width: size.$max-tablet) {
   .file {
     &__button {
-      width: f.cols(desktop, 2, 3) + 8px;
+      width: f.cols(desktop, 2, 3) + 6px;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div
-    @click="handleProcess"
+    @keydown="handleProcess"
     @keydown.enter="handleProcess"
     @keydown.space="handleProcess"
     ref="customFile"

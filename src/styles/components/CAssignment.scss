@@ -18,9 +18,9 @@
     left: 0;
     right: 0;
     background-color: var(--sec-color);
-    background-image: url(../../assets/bg-1.jpg);
+    background-image: url(../../assets/adopted/standard/bg-1-desktop.jpg);
     background-position: 0 0;
-    background-size: 1327px 885px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
   &__title {
@@ -44,13 +44,21 @@
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-desktop) {
+  .assignment {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-1-desktop-retina.jpg);
+    }
+  }
+}
+
 @media (max-width: size.$max-tablet) {
   .assignment {
-    --padding-vertical: 114px;
-    height: 623px;
+    --padding-vertical: 113px;
+    height: 622px;
     margin-bottom: 113px;
     &__bg {
-      background-size: 974px 650px;
+      background-image: url(../../assets/adopted/standard/bg-1-tablet.jpg);
     }
     &__title {
       @include m.h1(tablet);
@@ -59,7 +67,16 @@
     &__text {
       @include m.source-sans-pro(18, 24);
       width: f.cols(tablet, 7, 12);
-      margin-bottom: 35px;
+      margin-top: 19px;
+      margin-bottom: 33px;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-tablet) {
+  .assignment {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-1-tablet-retina.jpg);
     }
   }
 }
@@ -67,11 +84,10 @@
 @media (max-width: size.$max-mobile) {
   .assignment {
     --padding-vertical: 67px;
-    height: 393px;
-    margin-bottom: 68px;
+    height: 394px;
+    margin-bottom: 67px;
     &__bg {
-      background-size: 650px 434px;
-      background-position: -127px -9px;
+      background-image: url(../../assets/adopted/standard/bg-1-mobile.jpg);
     }
     &__title {
       text-align: center;
@@ -93,13 +109,20 @@
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-mobile) {
+  .assignment {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-1-mobile-retina.jpg);
+    }
+  }
+}
+
 @media (min-width: size.$min-two-k) {
   .assignment {
     padding-top: 133px;
     height: 676px;
     &__bg {
-      background-size: 2566px 1712px;
-      background-position: -5px -315px;
+      background-image: url(../../assets/adopted/standard/bg-1-2K.jpg);
     }
     &__title {
       left: -1px;
@@ -108,6 +131,14 @@
       width: f.cols(twoK, 6, 10);
       left: 1px;
       margin-bottom: 34px;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: size.$min-two-k) {
+  .assignment {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-1-2K-retina.jpg);
     }
   }
 }

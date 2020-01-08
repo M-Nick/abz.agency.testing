@@ -43,6 +43,7 @@
   }
   &__name {
     @include m.h4(desktop);
+    background-color: var(--bgc);
     margin-bottom: 8px;
     margin-left: -1px;
     margin-top: 1px;
@@ -89,6 +90,30 @@
     }
     &__info {
       margin-top: 13px;
+      &--empty {
+        position: relative;
+        --bgc: var(--loading-color);
+        .user__name {
+          left: 50%;
+          position: relative;
+          transform: translateX(-50%);
+        }
+        .user__position {
+          left: 50%;
+          position: relative;
+          transform: translateX(-50%);
+        }
+        .user__email {
+          left: 50%;
+          position: relative;
+          transform: translateX(-50%);
+        }
+        .user__phone {
+          left: 50%;
+          position: relative;
+          transform: translateX(-50%);
+        }
+      }
     }
     &__name {
       margin-top: 0;
@@ -122,6 +147,9 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      &--empty {
+        align-items: unset;
+      }
     }
     &__name {
       margin-bottom: 4px;

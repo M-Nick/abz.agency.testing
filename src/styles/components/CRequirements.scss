@@ -14,9 +14,9 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(../../assets/bg-2.jpg);
-    background-position: -3px 0;
-    background-size: 1145px 764px;
+    background-image: url(../../assets/adopted/standard/bg-2-desktop.jpg);
+    background-position: 0 0;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: -1;
   }
@@ -54,14 +54,21 @@
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-desktop) {
+  .reqs {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-2-desktop-retina.jpg);
+    }
+  }
+}
+
 @media (max-width: size.$max-tablet) {
   .reqs {
     padding-top: 114px;
     height: 878px;
     margin-bottom: 114px;
     &__bg {
-      background-position: -281px 0;
-      background-size: 1321px 880px;
+      background-image: url(../../assets/adopted/standard/bg-2-tablet.jpg);
     }
     &__header {
       width: 414px;
@@ -87,14 +94,21 @@
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-tablet) {
+  .reqs {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-2-tablet-retina.jpg);
+    }
+  }
+}
+
 @media (max-width: size.$max-mobile) {
   .reqs {
     padding-top: 66px;
     height: 1031px;
     margin-bottom: 68px;
     &__bg {
-      background-position: -623px -3px;
-      background-size: 1553px 1035px;
+      background-image: url(../../assets/adopted/standard/bg-2-mobile.jpg);
     }
     &__header {
       width: 100%;
@@ -127,12 +141,19 @@
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (max-width: size.$max-mobile) {
+  .reqs {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-2-mobile-retina.jpg);
+    }
+  }
+}
+
 @media (min-width: size.$min-two-k) {
   .reqs {
     height: 692px;
     &__bg {
-      background-position: -2px -463px;
-      background-size: 2564px 1711px;
+      background-image: url(../../assets/adopted/standard/bg-2-2K.jpg);
     }
     &__body {
       justify-content: flex-start;
@@ -143,6 +164,14 @@
     }
     &__img {
       top: 4px;
+    }
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) and (min-width: size.$min-two-k) {
+  .reqs {
+    &__bg {
+      background-image: url(../../assets/adopted/retina/bg-2-2K-retina.jpg);
     }
   }
 }

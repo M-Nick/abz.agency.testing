@@ -44,7 +44,7 @@ export default {
           alt: 'css logo',
           title: 'CSS is my best friend',
           text:
-            'Cascading Style Sheets (CSS) <br class="tablet" />is a style sheet language used for describing the presentation of a document written in a markup language like HTML.',
+            'Cascading Style Sheets (CSS) <br class="desktop" />is a style sheet language used for describing the presentation of a document written in a markup language like HTML.',
           class: 'relates__logo--smaller',
         },
         {
@@ -52,7 +52,7 @@ export default {
           alt: 'javascript logo',
           title: 'JavaScript is my passion',
           text:
-            'JavaScript is a high-level, interpreted programming language. It is a language which is also characterized as dynamic, weakly typed, prototype-based and <br />multi-paradigm.',
+            'JavaScript is a high-level, interpreted programming language.<br class="tablet"> It is a language which is also characterized as dynamic, weakly typed, prototype-based and <br class="desktop mobile" />multi-paradigm.',
           class: 'relates__logo--js',
         },
       ],

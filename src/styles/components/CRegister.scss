@@ -61,10 +61,10 @@
       width: f.cols(tablet, 4, 6) + 2px;
     }
     &__select {
-      width: f.cols(tablet, 6, 10);
+      width: f.cols(tablet, 6, 10) + 3px;
     }
     &__file {
-      width: f.cols(tablet, 6, 10);
+      width: f.cols(tablet, 6, 10) + 3px;
     }
   }
 }
