@@ -18,6 +18,7 @@ See hosted site in Github Pages: <https://m-nick.github.io/abz.agency.testing/>
 - [animate.css](https://github.com/daneden/animate.css) (for making simple animation)
 - [inputmask](https://github.com/RobinHerbots/Inputmask) vanilla version (without ~~JQuery~~) (for making type-mask in \<input type="tel"> element)
 - [vue-line-clamp](https://github.com/Frondor/vue-line-clamp) (for making ellipses and multiline ellipses in elements if text is too long)
+- [vue-touch-events](https://www.npmjs.com/package/vue2-touch-events) (for swiping left close menu)
 
 ### Every static image was compressed with one of the next
 
