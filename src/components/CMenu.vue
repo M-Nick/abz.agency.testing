@@ -1,10 +1,15 @@
 <template>
   <div class="cmenu">
     <transition name="animation-bg">
-      <div v-if="opened" @click="close" class="cmenu__bg"></div>
+      <div
+        v-touch:swipe.left="close"
+        v-if="opened"
+        @click="close"
+        class="cmenu__bg"
+      ></div>
     </transition>
     <transition name="animation-body">
-      <div v-if="opened" class="cmenu__body">
+      <div v-touch:swipe.left="close" v-if="opened" class="cmenu__body">
         <CFirstUser :user="user" class="cmenu__user" />
         <hr class="cmenu__line" />
         <CNav @click="handleLinkClick" class="cmenu__nav" />
