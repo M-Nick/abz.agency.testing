@@ -1,4 +1,7 @@
 // vue.config.js
 module.exports = {
-  publicPath: 'https://m-nick.github.io/abz.agency.testing/',
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? 'https://m-nick.github.io/abz.agency.testing/'
+      : '/',
 }
