@@ -2,22 +2,32 @@
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__item">
-        <a href="#about" class="menu nav__link">About me</a>
+        <a @click="handleLinkClick" href="#about" class="menu nav__link"
+          >About me</a
+        >
       </li>
       <li class="nav__item">
-        <a href="#relationships" class="menu nav__link">Relationships</a>
+        <a @click="handleLinkClick" href="#relationships" class="menu nav__link"
+          >Relationships</a
+        >
       </li>
       <li class="nav__item">
-        <a href="#requirements" class="menu nav__link">Requirements</a>
+        <a @click="handleLinkClick" href="#requirements" class="menu nav__link"
+          >Requirements</a
+        >
       </li>
       <li class="nav__item">
-        <a href="#users" class="menu nav__link">Users</a>
+        <a @click="handleLinkClick" href="#users" class="menu nav__link"
+          >Users</a
+        >
       </li>
       <li class="nav__item">
-        <a href="#register" class="menu nav__link">Sign Up</a>
+        <a @click="handleLinkClick" href="#register" class="menu nav__link"
+          >Sign Up</a
+        >
       </li>
       <li class="nav__item nav__item--last tablet mobile">
-        <a href="#" class="menu nav__link">Sign Out</a>
+        <a @click="handleLinkClick" href="#" class="menu nav__link">Sign Out</a>
       </li>
     </ul>
   </nav>
@@ -28,6 +38,11 @@ export default {
   name: 'CNav',
   data() {
     return {}
+  },
+  methods: {
+    handleLinkClick() {
+      this.$emit('click')
+    },
   },
 }
 </script>

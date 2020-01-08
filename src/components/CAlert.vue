@@ -16,6 +16,8 @@
 </template>
 
 <script>
+import { removeScroll, returnScroll } from '@/js/managePageScroll.js'
+
 export default {
   name: 'CAlert',
   data() {
@@ -32,30 +34,17 @@ export default {
       this.text = text
       this.button = button ? button : 'OK'
       this.opened = true
-      this.removeScroll()
+      window.addEventListener('keydown', this.handleKeydown)
+      removeScroll()
     },
     close() {
       this.opened = false
-      this.returnScroll()
+      window.removeEventListener('keydown', this.handleKeydown)
+      returnScroll()
     },
-    removeScroll() {
-      const el = document.scrollingElement
-      if (
-        el &&
-        el.style &&
-        Object.prototype.hasOwnProperty.call(el.style, 'overflow')
-      ) {
-        el.style.overflow = 'hidden'
-      }
-    },
-    returnScroll() {
-      const el = document.scrollingElement
-      if (
-        el &&
-        el.style &&
-        Object.prototype.hasOwnProperty.call(el.style, 'overflow')
-      ) {
-        el.style.overflow = ''
+    handleKeydown(e) {
+      if (e.code === 'Escape') {
+        this.close()
       }
     },
   },
