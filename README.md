@@ -10,7 +10,7 @@ See hosted site in Github Pages: <https://m-nick.github.io/abz.agency.testing/>
 
 - Framework: Vue.js
 - Css preprocessor: Sass (Scss)
-- Customize ESLint
+- Customized ESLint
 - Html, Css, JS, Webpack, Yarn, Node.js
 
 ### Third party libraries (installed with yarn)
