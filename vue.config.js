@@ -2,6 +2,6 @@
 module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production'
-      ? 'https://test-abz-agency-345.herokuapp.com/'
+      ? 'https://my-awesome-app-2.herokuapp.com/'
       : '/',
 }
